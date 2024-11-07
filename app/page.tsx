@@ -6,7 +6,7 @@ import { FileDown } from "lucide-react";
 
 export default function Home() {
   return (
-    <section className="h-full">
+    <section className="xl:min-h-[80vh] xl:flex xl:flex-col xl:justify-between">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* Text */}
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+
       <Stats />
     </section>
   );
