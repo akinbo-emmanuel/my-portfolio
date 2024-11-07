@@ -9,8 +9,8 @@ const socials = [
 ];
 
 interface SocialsProps {
-  containerStyles: any;
-  iconStyles: any;
+  containerStyles: string;
+  iconStyles: string;
 }
 
 const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
