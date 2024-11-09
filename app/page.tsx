@@ -5,7 +5,6 @@ import Stats from "@/components/Home/Stats";
 import { Button } from "@/components/ui/button";
 import { FileDown } from "lucide-react";
 import Link from "next/link";
-import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (

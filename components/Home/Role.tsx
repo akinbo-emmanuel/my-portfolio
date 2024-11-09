@@ -8,7 +8,7 @@ const Role = () => {
       <TypeAnimation
         sequence={[
           // Same substring at the start will only be typed out once, initially
-          "Frontend Engineer",
+          "Web3 Frontend Engineer",
           3000, // wait 1s before replacing "Mice" with "Hamsters"
           "Smart Contract Developer",
           3000,
