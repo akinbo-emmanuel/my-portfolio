@@ -20,28 +20,40 @@ import { Swiper as SwiperType } from "swiper/types";
 const projects = [
   {
     num: "01",
-    category: "Frontend",
+    category: "Web2 Frontend",
     title: "Walmart Clone",
     description:
       "Walmart Clone is a web application built using Next.js, Oxylabs, Shadcn, and Zustand. It replicates the functionality of the Walmart website, featuring a homepage, search page, product page, and cart. The content is currently unavailable as my free trial for Oxylabs has expired",
     stack: [
       {
-        name: "HTML5",
+        name: "Next.js",
       },
       {
-        name: "CSS3",
+        name: "Typescript",
+      },
+      {
+        name: "Tailwind CSS",
+      },
+      {
+        name: "Oxylabs",
+      },
+      {
+        name: "Shadcn",
+      },
+      {
+        name: "Zustand",
       },
     ],
     image: "/assets/work/thumb1.png",
-    live: "https://google.com",
+    live: "https://walmartclone.vercel.app",
     github: "https://github.com/akinbo-emmanuel",
   },
   {
     num: "02",
-    category: "Frontend",
-    title: "Twitter Clone",
+    category: "Web2 Frontend",
+    title: "Google Clone",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, amet? Minus deleniti magnam ipsa consectetur harum fuga corporis aperiam asperiores officia, et modi repellendus quaerat. Quam quidem voluptates facere voluptas.",
+      "Google Clone was aimed at building a search engine website that closely resembles Google. The project was implemented using HTML, CSS, and JavaScript, and all codes were hosted on GitHub for version control. The goal of the project was to provide an opportunity for me to improve my front-end web development skills by working on a real-world project. The project involved building a user interface similar to Google's search engine.",
     stack: [
       {
         name: "HTML5",
@@ -49,17 +61,20 @@ const projects = [
       {
         name: "CSS3",
       },
+      {
+        name: "JavaScript",
+      },
     ],
     image: "/assets/work/thumb2.png",
-    live: "https://google.com",
+    live: "https://googleclonedark.vercel.app/",
     github: "https://github.com/akinbo-emmanuel",
   },
   {
     num: "03",
     category: "Frontend",
-    title: "Clone",
+    title: "Pond5 Clone",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, amet? Minus deleniti magnam ipsa consectetur harum fuga corporis aperiam asperiores officia, et modi repellendus quaerat. Quam quidem voluptates facere voluptas.",
+      "Pond5 Clone was aimed at creating a replica of Pond5, a popular online marketplace for stock videos, music, and images. The project involved using HTML, CSS, and JavaScript to develop a functional and visually appealing platform that users can easily navigate. The clone will have all the key features of the original Pond5 (UI). The project was completed using GitHub as a version control system. The timeline for this project was from June 2022 to July 2022.",
     stack: [
       {
         name: "HTML5",
@@ -69,7 +84,7 @@ const projects = [
       },
     ],
     image: "/assets/work/thumb3.png",
-    live: "https://google.com",
+    live: "https://pond5-clone.vercel.app//",
     github: "https://github.com/akinbo-emmanuel",
   },
   {
@@ -140,14 +155,14 @@ const Work = () => {
 
               {/* Project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
 
               {/* Project Description */}
               <p className="text-white/60">{project.description}</p>
 
               {/* Stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-y-1 gap-x-2 flex-wrap">
                 {project.stack.map((item, index) => (
                   <li key={index} className="text-xl text-accent">
                     {item.name}
@@ -161,7 +176,7 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* Live project button */}
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -176,7 +191,7 @@ const Work = () => {
                 </Link>
 
                 {/* Github button */}
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
