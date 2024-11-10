@@ -9,10 +9,10 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   Tooltip,
+  TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { TooltipContent } from "@radix-ui/react-tooltip";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/Work/WorkSliderBtns";
 import { Swiper as SwiperType } from "swiper/types";
