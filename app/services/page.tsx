@@ -71,7 +71,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex-1 flex flex-col justify-center gap-6 group"
+              className="flex-1 flex flex-col justify-center gap-6 group border-b border-white/20 pb-6"
             >
               {/* Top */}
               <div className="w-full flex justify-between items-center">
@@ -91,8 +91,6 @@ const Services = () => {
               </h2>
 
               <p className="text-white/60">{service.description}</p>
-
-              <div className="border-b border-white/20 w-full"></div>
             </div>
           ))}
         </motion.div>
