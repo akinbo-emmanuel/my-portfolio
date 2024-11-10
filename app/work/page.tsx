@@ -74,7 +74,7 @@ const projects = [
     category: "Frontend",
     title: "Pond5 Clone",
     description:
-      "Pond5 Clone was aimed at creating a replica of Pond5, a popular online marketplace for stock videos, music, and images. The project involved using HTML, CSS, and JavaScript to develop a functional and visually appealing platform that users can easily navigate. The clone will have all the key features of the original Pond5 (UI). The project was completed using GitHub as a version control system. The timeline for this project was from June 2022 to July 2022.",
+      "Pond5 Clone was aimed at creating a replica of Pond5, a popular online marketplace for stock videos, music, and images. The project involved using HTML, CSS, and JavaScript to develop a functional and visually appealing platform that users can easily navigate. The clone has the key features of the original Pond5 (UI). The project was completed using GitHub as a version control system.",
     stack: [
       {
         name: "HTML5",
@@ -90,15 +90,24 @@ const projects = [
   {
     num: "04",
     category: "Frontend",
-    title: "Clone",
+    title: "Twitter Clone",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, amet? Minus deleniti magnam ipsa consectetur harum fuga corporis aperiam asperiores officia, et modi repellendus quaerat. Quam quidem voluptates facere voluptas.",
+      "The Twitter Clone project aimed at replicating the core functionalities of the popular social media platform Twitter. The project timeline was from December 2019 to January 2020 and the technology stacks used are CSS, JS, Git, React, Material UI, and GitHub. The project involved creating a responsive user interface. The Twitter Clone project provided a hands-on opportunity for me to practice front-end development skills.",
     stack: [
       {
-        name: "HTML5",
+        name: "React",
       },
       {
-        name: "CSS3",
+        name: "CSS",
+      },
+      {
+        name: "Material UI",
+      },
+      {
+        name: "JavaScript",
+      },
+      {
+        name: "Firebase",
       },
     ],
     image: "/assets/work/thumb1.png",
