@@ -38,10 +38,10 @@ const info = [
 const Contact = () => {
   const [result, setResult] = React.useState("");
 
-  const onSubmit = async (event: any) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement);
 
     formData.append("access_key", "020b47ac-247e-41a2-9e30-ed3cc3958b48");
 
@@ -54,7 +54,8 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
-      event.target.reset();
+      const form = event.target as HTMLFormElement;
+      form.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -84,10 +85,10 @@ const Contact = () => {
               <p className="text-white/60">
                 As a frontend engineer bridging Web2 and Web3, I'm passionate
                 about creating seamless, cutting-edge user experiences. Whether
-                it’s a sleek Web2 interface or an immersive Web3 dApp, I bring
-                technical expertise and a keen eye for design to every project.
-                Let’s collaborate to push boundaries, innovate, and bring your
-                ideas to life on the modern web.
+                it&apos;s a sleek Web2 interface or an immersive Web3 dApp, I
+                bring technical expertise and a keen eye for design to every
+                project. Let&apos;s collaborate to push boundaries, innovate,
+                and bring your ideas to life on the modern web.
               </p>
 
               {/* Input */}
