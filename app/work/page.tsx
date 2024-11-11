@@ -46,7 +46,7 @@ const projects = [
     ],
     image: "/assets/work/thumb1.png",
     live: "https://walmartclone.vercel.app",
-    github: "https://github.com/akinbo-emmanuel",
+    github: "https://github.com/akinbo-emmanuel/walmart-clone",
   },
   {
     num: "02",
@@ -67,7 +67,7 @@ const projects = [
     ],
     image: "/assets/work/thumb2.png",
     live: "https://googleclonedark.vercel.app/",
-    github: "https://github.com/akinbo-emmanuel",
+    github: "https://github.com/akinbo-emmanuel/googleclonedark",
   },
   {
     num: "03",
@@ -85,7 +85,7 @@ const projects = [
     ],
     image: "/assets/work/thumb3.png",
     live: "https://pond5-clone.vercel.app//",
-    github: "https://github.com/akinbo-emmanuel",
+    github: "https://github.com/akinbo-emmanuel/pond5_clone",
   },
   {
     num: "04",
@@ -110,9 +110,9 @@ const projects = [
         name: "Firebase",
       },
     ],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/work/thumb4.png",
     live: "https://google.com",
-    github: "https://github.com/akinbo-emmanuel",
+    github: "https://github.com/akinbo-emmanuel/twitterclone",
   },
   {
     num: "05",
