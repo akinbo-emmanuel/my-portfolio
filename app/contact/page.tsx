@@ -42,19 +42,23 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="py-6 xl:py-0"
+      className="py-6"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* Form */}
           <div className="xl:w-[54%] order-2 xl:order-none mb-8 xl:mb-0">
             <form className="space-y-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
+              <h3 className="text-4xl text-accent">
+                Let&apos;s Build the Future of the Web Together
+              </h3>
               <p className="text-white/60">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
-                fuga facere illum dolore possimus commodi cupiditate molestias
-                ducimus odit soluta consequatur, repudiandae eius quod
-                voluptatum perferendis praesentium et veniam. Non?
+                As a frontend engineer bridging Web2 and Web3, I'm passionate
+                about creating seamless, cutting-edge user experiences. Whether
+                it’s a sleek Web2 interface or an immersive Web3 dApp, I bring
+                technical expertise and a keen eye for design to every project.
+                Let’s collaborate to push boundaries, innovate, and bring your
+                ideas to life on the modern web.
               </p>
 
               {/* Input */}
