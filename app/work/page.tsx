@@ -111,27 +111,27 @@ const projects = [
       },
     ],
     image: "/assets/work/thumb4.png",
-    live: "https://google.com",
+    live: "https://twitterclone21.netlify.app/",
     github: "https://github.com/akinbo-emmanuel/twitterclone",
   },
-  {
-    num: "05",
-    category: "Frontend",
-    title: "Clone",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, amet? Minus deleniti magnam ipsa consectetur harum fuga corporis aperiam asperiores officia, et modi repellendus quaerat. Quam quidem voluptates facere voluptas.",
-    stack: [
-      {
-        name: "HTML5",
-      },
-      {
-        name: "CSS3",
-      },
-    ],
-    image: "/assets/work/thumb2.png",
-    live: "https://google.com",
-    github: "https://github.com/akinbo-emmanuel",
-  },
+  // {
+  //   num: "05",
+  //   category: "Frontend",
+  //   title: "Clone",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, amet? Minus deleniti magnam ipsa consectetur harum fuga corporis aperiam asperiores officia, et modi repellendus quaerat. Quam quidem voluptates facere voluptas.",
+  //   stack: [
+  //     {
+  //       name: "HTML5",
+  //     },
+  //     {
+  //       name: "CSS3",
+  //     },
+  //   ],
+  //   image: "/assets/work/thumb2.png",
+  //   live: "https://google.com",
+  //   github: "https://github.com/akinbo-emmanuel",
+  // },
 ];
 
 const Work = () => {
