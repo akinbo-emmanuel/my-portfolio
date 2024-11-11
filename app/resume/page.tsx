@@ -164,7 +164,7 @@ const skills = {
 
 const Resume = () => {
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
@@ -312,7 +312,7 @@ const Resume = () => {
           </div>
         </Tabs>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

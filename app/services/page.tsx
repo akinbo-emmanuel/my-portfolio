@@ -4,7 +4,7 @@ import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const services = [
+export const services = [
   {
     num: "01",
     title: "DApp Development",
