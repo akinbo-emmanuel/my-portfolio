@@ -12,9 +12,9 @@ import {
 } from "@/components/ui/select";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { services } from "../services/page";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { services } from "@/config/services";
 
 const info = [
   {
