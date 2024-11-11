@@ -53,12 +53,12 @@ const Contact = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setTimeout(() => setResult("Form Submitted Successfully"), 10000);
       const form = event.target as HTMLFormElement;
       form.reset();
     } else {
       console.log("Error", data);
-      setResult(data.message);
+      setTimeout(() => setResult(data.message), 10000);
     }
   };
 
@@ -143,7 +143,7 @@ const Contact = () => {
               {/* btn */}
               <div className="flex items-center gap-2">
                 <Button
-                  disabled={!!result}
+                  disabled={result === "Sending...."}
                   type="submit"
                   size="sm"
                   className="max-w-40 disabled:opacity-50 disabled:cursor-not-allowed"
