@@ -43,7 +43,7 @@ const projects = [
     ],
     image: "/assets/work/thumb.png",
     live: "https://lekesanniandassociates.com.ng",
-    github: "https://github.com/akinbo-emmanuel/walmart-clone",
+    github: "https://github.com/akinbo-emmanuel/",
   },
   {
     num: "02",
