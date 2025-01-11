@@ -21,6 +21,33 @@ const projects = [
   {
     num: "01",
     category: "Web2 Frontend",
+    title: "Real Estate Website",
+    description:
+      "A modern real estate website built for Leke Sanni and Associates, featuring property listings, company information, and contact forms. The website showcases available properties, provides detailed information about the real estate firm's services, and enables potential clients to easily get in touch.",
+    stack: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "Typescript",
+      },
+      {
+        name: "Tailwind CSS",
+      },
+      {
+        name: "Framer Motion",
+      },
+      {
+        name: "Shadcn",
+      },
+    ],
+    image: "/assets/work/thumb.png",
+    live: "https://lekesanniandassociates.com.ng",
+    github: "https://github.com/akinbo-emmanuel/walmart-clone",
+  },
+  {
+    num: "02",
+    category: "Web2 Frontend",
     title: "Walmart Clone",
     description:
       "Walmart Clone is a web application built using Next.js, Oxylabs, Shadcn, and Zustand. It replicates the functionality of the Walmart website, featuring a homepage, search page, product page, and cart. The content is currently unavailable as my free trial for Oxylabs has expired",
@@ -49,7 +76,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/walmart-clone",
   },
   {
-    num: "02",
+    num: "03",
     category: "Web2 Frontend",
     title: "Google Clone",
     description:
@@ -70,7 +97,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/googleclonedark",
   },
   {
-    num: "03",
+    num: "04",
     category: "Frontend",
     title: "Pond5 Clone",
     description:
@@ -88,7 +115,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/pond5_clone",
   },
   {
-    num: "04",
+    num: "05",
     category: "Frontend",
     title: "Twitter Clone",
     description:
