@@ -25,7 +25,10 @@ export default function Home() {
 
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href="https://flowcv.com/resume/w9gkoad08q" target="_blank">
+              <Link
+                href="https://raw.githubusercontent.com/akinbo-emmanuel/my-portfolio/main/public/assets/resume/Emmanuel-Akinbo-RESUME.pdf"
+                target="_blank"
+              >
                 <Button
                   variant={"outline"}
                   size={"lg"}
