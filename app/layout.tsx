@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 // Components
 import Header from "@/components/Header";
@@ -35,7 +36,9 @@ export const metadata: Metadata = {
     "Frontend Development Portfolio",
     "Blockchain Portfolio",
   ],
-  authors: [{ name: "Emmanuel Akinbo", url: "https://emmanuelakinbo.vercel.app" }],
+  authors: [
+    { name: "Emmanuel Akinbo", url: "https://emmanuelakinbo.vercel.app" },
+  ],
   openGraph: {
     title: "Emmanuel Akinbo | Frontend Engineer & Smart Contract Developer",
     description:
@@ -72,6 +75,8 @@ export default function RootLayout({
 
         <StairTransition />
         <PageTransition>{children}</PageTransition>
+
+        <Analytics />
       </body>
     </html>
   );
