@@ -26,8 +26,10 @@ export default function Home() {
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link
-                href="https://raw.githubusercontent.com/akinbo-emmanuel/my-portfolio/main/public/assets/resume/Emmanuel-Akinbo-RESUME.pdf"
+                href="/assets/resume/Emmanuel-Akinbo-RESUME.pdf"
+                download
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant={"outline"}
