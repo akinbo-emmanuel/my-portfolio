@@ -70,6 +70,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <script defer src="https://cloud.umami.is/script.js" data-website-id="f863488f-bd03-4a39-889e-360760459730"></script>
+      </head>
       <body className={jetbrainsMono.variable}>
         <Header />
 
