@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { cva, type VariantProps } from "class-variance-authority";
 import { IoMdClose } from "react-icons/io";
 
@@ -51,19 +52,25 @@ const sheetVariants = cva(
 
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
-    VariantProps<typeof sheetVariants> {}
+    VariantProps<typeof sheetVariants> {
+  title?: string;
+}
 
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, children, ...props }, ref) => (
+>(({ side = "right", className, children, title = "Navigation menu", ...props }, ref) => (
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
       className={cn(sheetVariants({ side }), className)}
+      aria-describedby={undefined}
       {...props}
     >
+      <VisuallyHidden.Root asChild>
+        <SheetPrimitive.Title>{title}</SheetPrimitive.Title>
+      </VisuallyHidden.Root>
       {children}
       <SheetPrimitive.Close className="absolute right-8 top-8 transition-opacity outline-none">
         <IoMdClose className="text-3xl text-accent" />
