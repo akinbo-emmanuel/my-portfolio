@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -20,6 +20,47 @@ import { Swiper as SwiperType } from "swiper/types";
 const projects = [
   {
     num: "01",
+    category: "EdTech Platform",
+    title: "Teen Africa Academy",
+    description:
+      "A multi-role educational platform that helps teenagers explore careers through weekly missions, stories, assessments, and personalized career insights. The app supports students, parents, organizations, and platform admins with tailored dashboards and role-based workflows.",
+    highlights: [
+      "Built student, parent, organization, and admin experiences with protected routes.",
+      "Implemented mission journeys, story viewing, interest assessments, and career recommendations.",
+      "Added parent child-management flows, dashboard insights, and admin content/user management.",
+      "Integrated API-driven data fetching with React Query and a centralized API client.",
+      "Added SEO metadata, sitemap, robots config, and structured JSON-LD.",
+    ],
+    stack: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "React",
+      },
+      {
+        name: "TypeScript",
+      },
+      {
+        name: "Tailwind CSS",
+      },
+      {
+        name: "TanStack React Query",
+      },
+      {
+        name: "Radix UI",
+      },
+      {
+        name: "Tiptap",
+      },
+    ],
+    image: "",
+    useFrame: true,
+    live: "https://taa25.vercel.app",
+    github: "",
+  },
+  {
+    num: "02",
     category: "Web2 Frontend",
     title: "Real Estate Website",
     description:
@@ -43,10 +84,10 @@ const projects = [
     ],
     image: "/assets/work/thumb.png",
     live: "https://lekesanniandassociates.com.ng",
-    github: "https://github.com/akinbo-emmanuel/",
+    github: "",
   },
   {
-    num: "02",
+    num: "03",
     category: "Web2 Frontend",
     title: "Walmart Clone",
     description:
@@ -76,7 +117,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/walmart-clone",
   },
   {
-    num: "03",
+    num: "04",
     category: "Web2 Frontend",
     title: "Google Clone",
     description:
@@ -97,7 +138,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/googleclonedark",
   },
   {
-    num: "04",
+    num: "05",
     category: "Frontend",
     title: "Pond5 Clone",
     description:
@@ -115,7 +156,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/pond5_clone",
   },
   {
-    num: "05",
+    num: "06",
     category: "Frontend",
     title: "Twitter Clone",
     description:
@@ -178,12 +219,12 @@ const Work = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 mb-24 xl:px-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="space-y-[30px] h-1/2">
+            <div className="space-y-[30px] h-1/2 mb-10 xl:mb-0">
               {/* Outline page */}
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
@@ -195,7 +236,17 @@ const Work = () => {
               </h2>
 
               {/* Project Description */}
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-white/60 text-justify">
+                {project.description}
+              </p>
+
+              {project.highlights && (
+                <ul className="space-y-1 text-sm text-white/60 list-disc list-inside text-justify">
+                  {project.highlights.map((highlight, index) => (
+                    <li key={index}>{highlight}</li>
+                  ))}
+                </ul>
+              )}
 
               {/* Stack */}
               <ul className="flex gap-y-1 gap-x-2 flex-wrap">
@@ -207,40 +258,28 @@ const Work = () => {
                 ))}
               </ul>
 
-              <div className="border border-white/20"></div>
+              {project.github && (
+                <div className="border border-white/20"></div>
+              )}
 
               {/* buttons */}
-              <div className="flex items-center gap-4">
-                {/* Live project button */}
-                <Link href={project.live} target="_blank">
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
+              {project.github && (
+                <div className="flex items-center gap-4">
+                  <Link href={project.github} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
 
-                      <TooltipContent>
-                        <p>Live project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-
-                {/* Github button */}
-                <Link href={project.github} target="_blank">
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-
-                      <TooltipContent>
-                        <p>GitHub repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-              </div>
+                        <TooltipContent>
+                          <p>GitHub repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
 
@@ -254,18 +293,39 @@ const Work = () => {
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
                   <div className="h-[300px] sm:h-[460px] md:h-[550px] lg:h-[670px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                    {/* Overlay */}
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    {project.useFrame && project.live ? (
+                      <div className="relative w-full h-full overflow-hidden bg-primary">
+                        <iframe
+                          src={project.live}
+                          title={`${project.title} live preview`}
+                          className="h-full w-full border-0"
+                          loading="lazy"
+                        />
 
-                    {/* Image */}
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={project.image}
-                        fill
-                        className="object-cover"
-                        alt=""
-                      />
-                    </div>
+                        <Link
+                          href={project.live}
+                          target="_blank"
+                          className="absolute bottom-4 right-4 z-20 rounded-full bg-accent px-4 py-2 text-sm font-medium text-primary transition-all hover:bg-accent-hover"
+                        >
+                          Visit live site
+                        </Link>
+                      </div>
+                    ) : (
+                      <>
+                        {/* Overlay */}
+                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+
+                        {/* Image */}
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={project.image}
+                            fill
+                            className="object-cover"
+                            alt=""
+                          />
+                        </div>
+                      </>
+                    )}
                   </div>
                 </SwiperSlide>
               ))}
