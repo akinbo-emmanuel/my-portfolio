@@ -61,6 +61,37 @@ const projects = [
   },
   {
     num: "02",
+    category: "Ecommerce Landing Page",
+    title: "FASCO Shop",
+    description:
+      "A modern fashion ecommerce landing page with a polished hero section, brand showcase, product-focused content blocks, customer testimonials, newsletter signup, and responsive navigation for a boutique shopping experience.",
+    highlights: [
+      "Built a clean fashion storefront homepage with premium editorial-style visuals.",
+      "Added responsive navigation, hero CTA, brand strip, benefits section, and floating cart controls.",
+      "Created Instagram, testimonial, newsletter, and footer sections to complete the landing page flow.",
+      "Focused on crisp spacing, typography, and high-contrast CTAs for a refined shopping feel.",
+    ],
+    stack: [
+      {
+        name: "Next.js",
+      },
+      {
+        name: "React",
+      },
+      {
+        name: "TypeScript",
+      },
+      {
+        name: "Tailwind CSS",
+      },
+    ],
+    image: "",
+    useFrame: true,
+    live: "https://fascoshop.vercel.app/",
+    github: "",
+  },
+  {
+    num: "03",
     category: "Web2 Frontend",
     title: "Real Estate Website",
     description:
@@ -87,7 +118,7 @@ const projects = [
     github: "",
   },
   {
-    num: "03",
+    num: "04",
     category: "Web2 Frontend",
     title: "Walmart Clone",
     description:
@@ -117,7 +148,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/walmart-clone",
   },
   {
-    num: "04",
+    num: "05",
     category: "Web2 Frontend",
     title: "Google Clone",
     description:
@@ -138,7 +169,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/googleclonedark",
   },
   {
-    num: "05",
+    num: "06",
     category: "Frontend",
     title: "Pond5 Clone",
     description:
@@ -156,7 +187,7 @@ const projects = [
     github: "https://github.com/akinbo-emmanuel/pond5_clone",
   },
   {
-    num: "06",
+    num: "07",
     category: "Frontend",
     title: "Twitter Clone",
     description:
