@@ -1,0 +1,40 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#0E121B"/>
+  <rect x="96" y="84" width="1008" height="732" rx="48" fill="#F5F7FA"/>
+  <rect x="96" y="84" width="1008" height="118" rx="48" fill="#2D2A6E"/>
+  <rect x="96" y="154" width="1008" height="48" fill="#2D2A6E"/>
+  <circle cx="174" cy="144" r="18" fill="#F4B400"/>
+  <circle cx="230" cy="144" r="18" fill="#FF6B6B"/>
+  <circle cx="286" cy="144" r="18" fill="#1FC16B"/>
+  <text x="352" y="154" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Teen Africa Academy</text>
+  <rect x="144" y="250" width="346" height="252" rx="28" fill="white" stroke="#E1E4EA" stroke-width="4"/>
+  <text x="184" y="318" fill="#2D2A6E" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">This Week's Mission</text>
+  <rect x="184" y="358" width="266" height="26" rx="13" fill="#12B76A"/>
+  <rect x="184" y="406" width="226" height="20" rx="10" fill="#CDD5DF"/>
+  <rect x="184" y="442" width="162" height="20" rx="10" fill="#E1E4EA"/>
+  <rect x="536" y="250" width="520" height="252" rx="28" fill="white" stroke="#E1E4EA" stroke-width="4"/>
+  <text x="576" y="318" fill="#2D2A6E" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Mission Journey</text>
+  <g transform="translate(584 374)">
+    <rect width="54" height="54" rx="14" fill="#2D2A6E"/>
+    <text x="19" y="37" fill="#F4B400" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">1</text>
+    <rect x="78" width="54" height="54" rx="14" fill="#2D2A6E"/>
+    <text x="97" y="37" fill="#F4B400" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">2</text>
+    <rect x="156" width="54" height="54" rx="14" fill="#2D2A6E"/>
+    <text x="175" y="37" fill="#F4B400" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">3</text>
+    <rect x="234" width="54" height="54" rx="14" fill="#EEF2F6"/>
+    <text x="253" y="37" fill="#99A0AE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">4</text>
+    <rect x="312" width="54" height="54" rx="14" fill="#EEF2F6"/>
+    <text x="331" y="37" fill="#99A0AE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">5</text>
+  </g>
+  <rect x="144" y="546" width="432" height="194" rx="28" fill="white" stroke="#E1E4EA" stroke-width="4"/>
+  <text x="184" y="612" fill="#2D2A6E" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Career Insights</text>
+  <rect x="184" y="648" width="310" height="18" rx="9" fill="#1FC16B"/>
+  <rect x="184" y="684" width="246" height="18" rx="9" fill="#F4B400"/>
+  <rect x="184" y="720" width="176" height="18" rx="9" fill="#4A41D0"/>
+  <rect x="622" y="546" width="434" height="194" rx="28" fill="white" stroke="#E1E4EA" stroke-width="4"/>
+  <text x="662" y="612" fill="#2D2A6E" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Admin Dashboard</text>
+  <rect x="662" y="652" width="96" height="58" rx="16" fill="#E0FAEC"/>
+  <rect x="786" y="652" width="96" height="58" rx="16" fill="#FFF4E5"/>
+  <rect x="910" y="652" width="96" height="58" rx="16" fill="#FFEBEC"/>
+  <path d="M144 790C304 730 391 826 542 772C693 718 812 690 1056 750" stroke="#F4B400" stroke-width="12" stroke-linecap="round"/>
+</svg>

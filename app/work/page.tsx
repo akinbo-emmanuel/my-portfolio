@@ -88,7 +88,7 @@ const projects = [
     image: "",
     useFrame: true,
     live: "https://fascoshop.vercel.app/",
-    github: "",
+    github: "https://github.com/akinbo-emmanuel/online-shopping/",
   },
   {
     num: "03",
