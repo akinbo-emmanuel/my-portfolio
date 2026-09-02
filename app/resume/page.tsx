@@ -9,7 +9,6 @@ import {
   SiEthereum,
   SiTypescript,
 } from "react-icons/si";
-import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -164,14 +163,7 @@ const skills = {
 
 const Resume = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
-    >
+    <section className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
       <div className="container mx-auto">
         <Tabs
           defaultValue="about-me"
@@ -312,7 +304,7 @@ const Resume = () => {
           </div>
         </Tabs>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

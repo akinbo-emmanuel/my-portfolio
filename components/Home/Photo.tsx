@@ -1,27 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
 const Photo = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div className="w-full h-full relative">
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={shouldReduceMotion ? false : { opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+          transition: {
+            duration: shouldReduceMotion ? 0 : 0.25,
+            ease: "easeOut",
+          },
         }}
       >
         {/* image */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-difference absolute"
-        >
+        <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-difference absolute">
           <Image
             src="/assets/photo.png"
             priority
@@ -30,7 +28,7 @@ const Photo = () => {
             alt=""
             className="object-contain rounded-full"
           />
-        </motion.div>
+        </div>
 
         {/* circle */}
         <motion.svg
@@ -48,13 +46,21 @@ const Photo = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
-            animate={{
-              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
-              rotate: [120, 360],
-            }}
+            animate={
+              shouldReduceMotion
+                ? { strokeDasharray: "24 10 0 0", rotate: 0 }
+                : {
+                    strokeDasharray: [
+                      "15 120 25 25",
+                      "16 25 92 72",
+                      "4 250 22 22",
+                    ],
+                    rotate: [120, 360],
+                  }
+            }
             transition={{
-              duration: 20,
-              repeat: Infinity,
+              duration: shouldReduceMotion ? 0 : 20,
+              repeat: shouldReduceMotion ? 0 : Infinity,
               repeatType: "reverse",
             }}
           />

@@ -7,7 +7,6 @@ import { Analytics } from "@vercel/analytics/next";
 // Components
 import Header from "@/components/Header";
 import PageTransition from "@/components/Animation/PageTransition";
-import StairTransition from "@/components/Animation/StairTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -75,8 +74,6 @@ export default function RootLayout({
       </head>
       <body className={jetbrainsMono.variable}>
         <Header />
-
-        <StairTransition />
         <PageTransition>{children}</PageTransition>
 
         <Analytics />
