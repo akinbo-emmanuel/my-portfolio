@@ -19,8 +19,8 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
         initial={{ clipPath: "inset(0 0 0 0)" }}
         animate={{ clipPath: "inset(0 0 100% 0)" }}
         transition={{
-          delay: 0.18,
-          duration: 0.55,
+          delay: 0.22,
+          duration: 0.78,
           ease: [0.76, 0, 0.24, 1],
         }}
       >
@@ -28,7 +28,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
           className="text-4xl font-semibold text-white"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: [0, 1, 1, 0], y: [8, 0, 0, -6] }}
-          transition={{ duration: 0.55, times: [0, 0.2, 0.65, 1] }}
+          transition={{ duration: 0.78, times: [0, 0.18, 0.7, 1] }}
         >
           Emmanuel<span className="text-accent">.</span>
         </motion.span>
@@ -40,7 +40,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -4 }}
-          transition={{ delay: 0.22, duration: 0.32, ease: "easeOut" }}
+          transition={{ delay: 0.35, duration: 0.42, ease: "easeOut" }}
         >
           {children}
         </motion.main>
