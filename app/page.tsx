@@ -12,7 +12,7 @@ export default function Home() {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* Text */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
+          <div className="order-2 text-left xl:order-none">
             <Role />
             <h1 className="h1 mb-6">
               Hello, I&apos;m <br />{" "}
@@ -25,7 +25,7 @@ export default function Home() {
             </p>
 
             {/* btn and socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col items-center gap-8 xl:flex-row">
               <Link
                 href="/assets/resume/Emmanuel-Akinbo-RESUME.pdf"
                 download

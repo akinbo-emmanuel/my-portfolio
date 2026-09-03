@@ -18,7 +18,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
         <div
           key={`curtain-${pathname}`}
           aria-hidden="true"
-          className="page-transition-curtain pointer-events-none fixed inset-0 z-50 overflow-hidden"
+          className="page-transition-curtain pointer-events-none fixed inset-0 z-[60] overflow-hidden"
         >
           <motion.div
             className="absolute inset-0 bg-accent will-change-transform"
@@ -51,7 +51,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
             animate={{ opacity: [0, 1, 1, 0], y: [6, 0, 0, -4] }}
             transition={{ duration: 0.62, times: [0, 0.18, 0.55, 1] }}
           >
-            <span className="text-4xl font-semibold text-white">
+            <span className="text-4xl font-semibold text-foreground">
               Emmanuel<span className="text-accent">.</span>
             </span>
           </motion.div>
