@@ -126,12 +126,12 @@ const ProjectLinks = ({
   live: string;
   github: string;
 }) => (
-  <div className="flex flex-wrap gap-3">
+  <div className="flex flex-col gap-3 sm:flex-row">
     <Link
       href={live}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
+      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
     >
       View live site
       <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -142,7 +142,7 @@ const ProjectLinks = ({
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-border px-5 py-2.5 font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
       >
         View source
         <Github className="h-4 w-4" aria-hidden="true" />
@@ -153,20 +153,20 @@ const ProjectLinks = ({
 
 export default function Work() {
   return (
-    <div className="pb-24 pt-8 xl:pt-12">
+    <div className="pb-16 pt-6 sm:pb-24 sm:pt-8 xl:pt-12">
       <section className="container mx-auto">
-        <div className="mb-14 max-w-3xl">
+        <div className="mb-10 max-w-3xl sm:mb-14">
           <p className="mb-3 font-medium uppercase tracking-[0.2em] text-accent">
             Selected work
           </p>
           <h1 className="h2 mb-5">Products built around real user needs.</h1>
-          <p className="text-lg text-foreground/60">
+          <p className="text-base text-foreground/60 sm:text-lg">
             A closer look at how I approach frontend architecture, product
             workflows, responsive interfaces, and dependable delivery.
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {featuredProjects.map((project, index) => (
             <article
               key={project.title}
@@ -187,17 +187,17 @@ export default function Work() {
                   />
                 </div>
 
-                <div className="flex flex-col justify-center p-7 sm:p-10 xl:p-14">
-                  <div className="mb-7 flex items-center justify-between gap-5">
+                <div className="flex flex-col justify-center p-5 sm:p-10 xl:p-14">
+                  <div className="mb-6 flex items-start justify-between gap-5 sm:mb-7 sm:items-center">
                     <p className="text-sm font-medium uppercase tracking-[0.16em] text-accent">
                       {project.category}
                     </p>
-                    <span className="text-4xl font-bold text-foreground/10">
+                    <span className="text-3xl font-bold text-foreground/10 sm:text-4xl">
                       {project.num}
                     </span>
                   </div>
 
-                  <h2 className="mb-5 text-3xl font-bold sm:text-4xl">
+                  <h2 className="mb-5 text-2xl font-bold sm:text-4xl">
                     {project.title}
                   </h2>
                   <p className="mb-7 text-foreground/60">{project.summary}</p>
@@ -238,12 +238,12 @@ export default function Work() {
         </div>
       </section>
 
-      <section className="container mx-auto mt-24 border-t border-border/60 pt-14">
+      <section className="container mx-auto mt-16 border-t border-border/60 pt-10 sm:mt-24 sm:pt-14">
         <div className="mb-9 max-w-2xl">
           <p className="mb-2 font-medium uppercase tracking-[0.2em] text-accent">
             Earlier work
           </p>
-          <h2 className="text-3xl font-bold">Experiments and learning projects</h2>
+          <h2 className="text-2xl font-bold sm:text-3xl">Experiments and learning projects</h2>
           <p className="mt-3 text-foreground/60">
             Selected projects from earlier stages of my frontend journey.
           </p>
@@ -265,8 +265,8 @@ export default function Work() {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="mb-2 text-2xl font-semibold">{project.title}</h3>
+              <div className="p-5 sm:p-6">
+                <h3 className="mb-2 text-xl font-semibold sm:text-2xl">{project.title}</h3>
                 <p className="mb-5 text-sm text-foreground/60">
                   {project.description}
                 </p>

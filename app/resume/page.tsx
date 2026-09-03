@@ -163,13 +163,13 @@ const skills = {
 
 const Resume = () => {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+    <section className="flex min-h-[80vh] items-center justify-center py-10 sm:py-12 xl:py-0">
       <div className="container mx-auto">
         <Tabs
           defaultValue="about-me"
-          className="flex flex-col xl:flex-row gap-[60px]"
+          className="flex flex-col gap-10 xl:flex-row xl:gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="mx-auto flex w-full max-w-[380px] flex-col gap-3 xl:mx-0 xl:gap-6">
             <TabsTrigger value="about-me">About me</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
@@ -177,24 +177,24 @@ const Resume = () => {
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="w-full xl:min-h-[70vh]">
             {/* Experience */}
             <TabsContent value="experience" className="w-full">
-              <div className="space-y-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+              <div className="space-y-6 text-center xl:space-y-[30px] xl:text-left">
+                <h3 className="text-3xl font-bold sm:text-4xl">{experience.title}</h3>
                 <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
                   {experience.description}
                 </p>
 
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="xl:h-[400px]">
+                  <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:gap-[30px]">
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-10 py-6 shadow-sm lg:items-start"
+                        className="flex min-h-[160px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-5 py-6 text-center shadow-sm sm:px-6 xl:h-[184px] xl:items-start xl:px-10 xl:text-left"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="min-h-[52px] max-w-[260px] text-lg sm:text-xl xl:min-h-[60px]">
                           {item.position}
                         </h3>
                         <div className="flex items-center gap-3">
@@ -218,15 +218,15 @@ const Resume = () => {
                   {education.description}
                 </p>
 
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="xl:h-[400px]">
+                  <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:gap-[30px]">
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-10 py-6 shadow-sm lg:items-start"
+                        className="flex min-h-[160px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-5 py-6 text-center shadow-sm sm:px-6 xl:h-[184px] xl:items-start xl:px-10 xl:text-left"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="min-h-[52px] max-w-[260px] text-lg sm:text-xl xl:min-h-[60px]">
                           {item.degree}
                         </h3>
                         <div className="flex items-center gap-3">
@@ -244,21 +244,21 @@ const Resume = () => {
 
             {/* Skills */}
             <TabsContent value="skills" className="w-full h-full">
-              <div className="space-y-[30px]">
-                <div className="space-y-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+              <div className="space-y-6 xl:space-y-[30px]">
+                <div className="space-y-6 text-center xl:space-y-[30px] xl:text-left">
+                  <h3 className="text-3xl font-bold sm:text-4xl">{skills.title}</h3>
                   <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="xl:h-[400px]">
                   <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                     {skills.skillList.map((skill, index) => (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="group flex h-[150px] w-full items-center justify-center rounded-xl border border-border/60 bg-surface shadow-sm">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                            <TooltipTrigger className="group flex h-28 w-full items-center justify-center rounded-xl border border-border/60 bg-surface shadow-sm sm:h-[150px]">
+                              <div className="text-5xl transition-all duration-300 group-hover:text-accent sm:text-6xl">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
@@ -280,13 +280,13 @@ const Resume = () => {
               value="about-me"
               className="w-full text-center xl:text-left"
             >
-              <div className="space-y-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
+              <div className="space-y-6 xl:space-y-[30px]">
+                <h3 className="text-3xl font-bold sm:text-4xl">{about.title}</h3>
                 <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
                   {about.description}
                 </p>
 
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="mx-auto grid max-w-[620px] grid-cols-1 gap-y-4 sm:gap-y-6 xl:mx-0 xl:grid-cols-2">
                   {about.info.map((item, index) => (
                     <li
                       key={index}
@@ -295,7 +295,7 @@ const Resume = () => {
                       } flex items-center justify-center xl:justify-start gap-4`}
                     >
                       <span className="text-foreground/60">{item.fieldName}:</span>
-                      <span className="text-xl">{item.fieldValue}</span>
+                      <span className="break-all text-base sm:text-xl">{item.fieldValue}</span>
                     </li>
                   ))}
                 </ul>

@@ -17,23 +17,23 @@ const MobileNav = () => {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className="flex items-center justify-center">
+      <SheetTrigger className="flex h-11 w-11 items-center justify-center">
         <CiMenuFries className="text-3xl text-accent" />
       </SheetTrigger>
 
       <SheetContent className="flex w-[64vw] max-w-[18rem] flex-col sm:max-w-[18rem]">
         <SheetTitle className="sr-only">Navigation menu</SheetTitle>
         {/* Logo */}
-        <div className="mb-20 mt-20 text-left text-2xl">
+        <div className="mb-14 mt-16 text-left text-2xl">
           <Link href={"/"} onClick={() => setOpen(false)}>
-            <h1 className="text-4xl font-semibold">
+            <h1 className="text-3xl font-semibold">
               Emmanuel<span className="text-accent">.</span>
             </h1>
           </Link>
         </div>
 
         {/* nav */}
-        <nav className="flex flex-col items-start gap-6">
+        <nav className="flex flex-col items-start gap-3">
           {links.map((link, index) => (
             <Link
               href={link.path}
@@ -41,7 +41,7 @@ const MobileNav = () => {
               onClick={() => setOpen(false)}
               className={`${
                 pathname === link.path && "text-accent border-b-2 border-accent"
-              } text-xl capitalize hover:text-accent transition-all`}
+              } flex min-h-11 items-center text-xl capitalize transition-colors hover:text-accent`}
             >
               {link.name}
             </Link>

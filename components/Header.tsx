@@ -6,11 +6,11 @@ import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
-    <header className="py-8 text-foreground xl:py-12">
+    <header className="py-5 text-foreground sm:py-6 xl:py-12">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href={"/"}>
-          <h1 className="text-4xl font-semibold">
+          <h1 className="text-2xl font-semibold sm:text-3xl xl:text-4xl">
             Emmanuel<span className="text-accent">.</span>
           </h1>
         </Link>

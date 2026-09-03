@@ -6,9 +6,9 @@ import { services } from "@/config/services";
 
 const Services = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 cl:py-0">
+    <section className="flex min-h-[80vh] flex-col justify-center py-10 sm:py-12 xl:py-0">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 xl:gap-[60px]">
           {services.map((service, index) => (
             <div
               key={index}
@@ -16,18 +16,18 @@ const Services = () => {
             >
               {/* Top */}
               <div className="w-full flex justify-between items-center">
-                <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                <div className="text-4xl font-extrabold text-outline text-transparent transition-all duration-500 group-hover:text-outline-hover sm:text-5xl">
                   {service.num}
                 </div>
                 <Link
                   href={service.href}
-                  className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-foreground transition-all duration-500 hover:-rotate-45 group-hover:bg-accent"
+                  className="flex h-14 w-14 items-center justify-center rounded-full bg-foreground transition-all duration-500 hover:-rotate-45 group-hover:bg-accent sm:h-[70px] sm:w-[70px]"
                 >
                   <BsArrowDownRight className="text-3xl text-background group-hover:text-accent-foreground" />
                 </Link>
               </div>
 
-              <h2 className="text-[42px] font-bold leading-none text-foreground transition-all duration-500 group-hover:text-accent">
+              <h2 className="text-3xl font-bold leading-none text-foreground transition-all duration-500 group-hover:text-accent sm:text-4xl xl:text-[42px]">
                 {service.title}
               </h2>
 

@@ -19,7 +19,7 @@ const Photo = () => {
         }}
       >
         {/* image */}
-        <div className="absolute h-[298px] w-[298px] xl:h-[498px] xl:w-[498px]">
+        <div className="absolute h-[76vw] max-h-[298px] w-[76vw] max-w-[298px] md:h-[258px] md:w-[258px] md:max-h-none md:max-w-none lg:h-[298px] lg:w-[298px] xl:h-[498px] xl:w-[498px]">
           <Image
             src="/assets/photo.webp"
             priority
@@ -32,7 +32,7 @@ const Photo = () => {
 
         {/* circle */}
         <motion.svg
-          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+          className="h-[77vw] max-h-[300px] w-[77vw] max-w-[300px] md:h-[260px] md:w-[260px] md:max-h-none md:max-w-none lg:h-[300px] lg:w-[300px] xl:h-[506px] xl:w-[506px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="https://www.w3.org/2000/svg"
