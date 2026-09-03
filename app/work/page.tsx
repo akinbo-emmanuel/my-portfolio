@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Github } from "lucide-react";
 
 const featuredProjects = [
   {
@@ -131,7 +131,7 @@ const ProjectLinks = ({
       href={live}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
+      className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover sm:w-auto"
     >
       View live site
       <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -142,13 +142,47 @@ const ProjectLinks = ({
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-border px-5 py-2.5 font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+        className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-border px-5 py-2.5 font-medium text-foreground transition-colors hover:border-accent hover:text-accent sm:w-auto"
       >
         View source
         <Github className="h-4 w-4" aria-hidden="true" />
       </Link>
     )}
   </div>
+);
+
+const Highlights = ({ highlights }: { highlights: string[] }) => (
+  <>
+    <details className="group mb-7 rounded-xl border border-border/60 bg-muted/40 p-4 sm:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-foreground [&::-webkit-details-marker]:hidden">
+        What I delivered
+        <ChevronDown
+          className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180"
+          aria-hidden="true"
+        />
+      </summary>
+      <ul className="mt-4 space-y-2 text-sm text-foreground/60">
+        {highlights.map((highlight) => (
+          <li key={highlight} className="flex gap-3">
+            <span className="mt-[0.7rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            <span>{highlight}</span>
+          </li>
+        ))}
+      </ul>
+    </details>
+
+    <div className="mb-8 hidden sm:block">
+      <h3 className="mb-3 font-semibold">What I delivered</h3>
+      <ul className="space-y-2 text-sm text-foreground/60">
+        {highlights.map((highlight) => (
+          <li key={highlight} className="flex gap-3">
+            <span className="mt-[0.7rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            <span>{highlight}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </>
 );
 
 export default function Work() {
@@ -209,15 +243,7 @@ export default function Work() {
                     <p className="text-foreground/80">{project.contribution}</p>
                   </div>
 
-                  <h3 className="mb-3 font-semibold">What I delivered</h3>
-                  <ul className="mb-8 space-y-2 text-sm text-foreground/60">
-                    {project.highlights.map((highlight) => (
-                      <li key={highlight} className="flex gap-3">
-                        <span className="mt-[0.7rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <Highlights highlights={project.highlights} />
 
                   <ul className="mb-8 flex flex-wrap gap-2">
                     {project.stack.map((technology) => (
