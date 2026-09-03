@@ -15,11 +15,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Emmanuel Akinbo | Frontend Engineer & Smart Contract Developer",
+  title: "Emmanuel Akinbo | Senior Frontend Engineer",
   description:
-    "Explore the portfolio of Emmanuel Akinbo, a skilled Frontend Engineer specializing in React, Next.js, Tailwind CSS, and TypeScript. Also experienced in Smart Contract development for Ethereum with Solidity and EVM expertise. Discover projects, skills, and case studies in modern web and blockchain development.",
+    "Portfolio of Emmanuel Akinbo, a Senior Frontend Engineer specializing in React, Next.js, TypeScript, accessible interfaces, and scalable web products, with additional experience in Web3 integrations.",
   keywords: [
     "Emmanuel Akinbo",
+    "Senior Frontend Engineer",
     "Frontend Engineer",
     "React Developer",
     "Next.js Developer",
@@ -39,9 +40,9 @@ export const metadata: Metadata = {
     { name: "Emmanuel Akinbo", url: "https://emmanuelakinbo.vercel.app" },
   ],
   openGraph: {
-    title: "Emmanuel Akinbo | Frontend Engineer & Smart Contract Developer",
+    title: "Emmanuel Akinbo | Senior Frontend Engineer",
     description:
-      "Browse the work and expertise of Emmanuel Akinbo in frontend development (React, Next.js, Tailwind CSS) and blockchain (Ethereum, Solidity, EVM).",
+      "Senior frontend engineering work by Emmanuel Akinbo, focused on scalable React and Next.js products, accessible interfaces, and reliable user experiences.",
     url: "https://emmanuelakinbo.vercel.app",
     type: "website",
     images: [
@@ -49,15 +50,15 @@ export const metadata: Metadata = {
         url: "https://emmanuelakinbo.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Emmanuel Akinbo Portfolio - Frontend Engineer & Blockchain Developer",
+        alt: "Emmanuel Akinbo — Senior Frontend Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emmanuel Akinbo | Frontend Engineer & Smart Contract Developer",
+    title: "Emmanuel Akinbo | Senior Frontend Engineer",
     description:
-      "Frontend development and blockchain projects by Emmanuel Akinbo, showcasing React, Next.js, Tailwind, Solidity, and EVM skills.",
+      "Senior frontend engineering work focused on scalable React and Next.js products, accessible interfaces, and reliable user experiences.",
     images: ["https://emmanuelakinbo.vercel.app/twitter-image.jpg"],
   },
 };

@@ -1,51 +1,51 @@
 export const services = [
   {
     num: "01",
-    title: "DApp Development",
+    title: "Frontend Product Development",
     description:
-      "Build decentralized applications (DApps) with interactive frontends that seamlessly connect to blockchain networks. Integrate wallet connections, blockchain transactions, and custom user interfaces for an optimal Web3 experience.",
+      "Build reliable, production-ready web products with React, Next.js, and TypeScript, from early product ideas to polished customer-facing experiences.",
     href: "",
   },
   {
     num: "02",
-    title: "Smart Contract Development",
+    title: "Frontend Architecture",
     description:
-      "Design, develop, and deploy secure smart contracts on Ethereum, Binance Smart Chain, and other EVM-compatible blockchains. Ensure reliability through thorough testing and gas optimization.",
+      "Design scalable frontend systems with clear component boundaries, maintainable application structure, predictable state management, and dependable API integration.",
     href: "",
   },
   {
     num: "03",
-    title: "Web2/Web3 Integration",
+    title: "Design Systems and UI Engineering",
     description:
-      "Connect Web2 applications with Web3 features, enabling users to interact with blockchain-based functionalities from traditional web interfaces. This includes integrating wallets, token transfers, and blockchain data access.",
+      "Create reusable component libraries and consistent interface patterns that help teams ship polished features faster across products and platforms.",
     href: "",
   },
   {
     num: "04",
-    title: "Responsive and Mobile-Optimized Design",
+    title: "Responsive Development",
     description:
-      "Design highly responsive and mobile-friendly interfaces, providing a consistent user experience across devices, whether interacting with traditional Web2 features or decentralized Web3 components.",
+      "Deliver accessible, mobile-first interfaces that remain clear, fast, and consistent across screen sizes, browsers, and input methods.",
     href: "",
   },
   {
     num: "05",
-    title: "UI/UX Design for Web2 and Web3",
+    title: "Performance and Accessibility",
     description:
-      "Craft user-friendly and visually appealing designs for Web2 and Web3 applications. Prioritize usability, with features like wallet connections, transaction feedback, and simplified Web3 onboarding.",
+      "Improve Core Web Vitals, loading behavior, interaction speed, semantic structure, and accessibility so products work better for every user.",
     href: "",
   },
   {
     num: "06",
-    title: "Performance Optimization",
+    title: "Web3 and DApp Integration",
     description:
-      "Optimize web applications for faster load times and smoother interactions. Implement best practices in asset loading, caching, and resource management to enhance both Web2 and Web3 user experiences.",
+      "Add wallet connections, blockchain transactions, contract interactions, and clear transaction feedback to familiar, user-friendly web interfaces.",
     href: "",
   },
   {
     num: "07",
-    title: "Consulting and Technical Advisory",
+    title: "Frontend Technical Consulting",
     description:
-      "Provide consulting on Web2/Web3 best practices, blockchain integration strategies, and smart contract implementation to help clients navigate the evolving Web3 landscape.",
+      "Help teams make sound decisions about frontend architecture, technical debt, performance, delivery workflows, and Web3 integration strategy.",
     href: "",
   },
 ];

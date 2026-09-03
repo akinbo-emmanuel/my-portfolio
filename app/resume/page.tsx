@@ -21,7 +21,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "I am Emmanuel O. Akinbo, a dedicated Web2 and Web3 Frontend Engineer with over five years of experience in building efficient, scalable, and visually appealing applications. My expertise spans from crafting intuitive frontend interfaces to developing robust smart contracts for decentralized applications. With a passion for innovation and technology, I aim to bridge the gap between traditional web technologies and the evolving blockchain space.",
+    "I am Emmanuel O. Akinbo, a Senior Frontend Engineer with over five years of experience building fast, accessible, and scalable web products. I specialize in React, Next.js, and TypeScript, translating complex product requirements into reliable interfaces and maintainable frontend systems. I also bring experience with Web3 integrations and smart contract development when products require blockchain capabilities.",
   info: [
     {
       fieldName: "Name",
@@ -58,7 +58,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "With a strong background in frontend development and Web3 technology, I've had the privilege of working with various teams and companies, contributing to projects that range from building dynamic UIs to deploying secure smart contracts. Here’s a look at my professional journey so far:",
+    "I have worked across product teams and organizations to build responsive interfaces, scalable frontend architecture, and dependable user experiences. Here’s a look at my professional journey so far:",
   items: [
     {
       company: "Dukia Precious Metals",
@@ -115,7 +115,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Throughout my career, I’ve developed a versatile skill set covering both frontend and blockchain technologies. From traditional Web2 frameworks to Web3-specific tools, these skills enable me to deliver high-quality applications that are both functional and secure.",
+    "My core expertise is frontend engineering with React, Next.js, TypeScript, modern CSS, and scalable UI architecture. Solidity and Ethereum extend that foundation for products requiring Web3 capabilities.",
   skillList: [
     {
       icon: <FaHtml5 />,

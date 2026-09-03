@@ -72,16 +72,13 @@ const Contact = () => {
               className="space-y-6 p-10 bg-[#27272c] rounded-xl"
             >
               <h3 className="text-4xl text-accent">
-                Let&apos;s Build the Future of the Web Together
+                Let&apos;s Build Something Exceptional
               </h3>
               <p className="text-white/60">
-                As a frontend engineer bridging Web2 and Web3, I&apos;m
-                passionate about creating seamless, cutting-edge user
-                experiences. Whether it&apos;s a sleek Web2 interface or an
-                immersive Web3 dApp, I bring technical expertise and a keen eye
-                for design to every project. Let&apos;s collaborate to push
-                boundaries, innovate, and bring your ideas to life on the modern
-                web.
+                As a Senior Frontend Engineer, I turn complex requirements into
+                fast, accessible, and maintainable web products. Whether you
+                need a polished product interface, a scalable frontend system,
+                or Web3 integration, I can help bring it to life.
               </p>
 
               {/* Input */}

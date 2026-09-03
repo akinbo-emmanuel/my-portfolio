@@ -19,8 +19,9 @@ export default function Home() {
               <span className="text-accent">Emmanuel Akinbo</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I create seamless digital journeys with a strong command of
-              diverse coding languages and cutting-edge tech.
+              I build fast, accessible React and Next.js products—turning
+              complex ideas and workflows into clear, reliable experiences
+              people enjoy using.
             </p>
 
             {/* btn and socials */}

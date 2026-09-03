@@ -91,7 +91,7 @@ const projects = [
   },
   {
     num: "03",
-    category: "Web2 Frontend",
+    category: "Frontend Development",
     title: "Real Estate Website",
     description:
       "A modern real estate website built for Leke Sanni and Associates, featuring property listings, company information, and contact forms. The website showcases available properties, provides detailed information about the real estate firm's services, and enables potential clients to easily get in touch.",
@@ -118,7 +118,7 @@ const projects = [
   },
   {
     num: "04",
-    category: "Web2 Frontend",
+    category: "Frontend Development",
     title: "Walmart Clone",
     description:
       "Walmart Clone is a web application built using Next.js, Oxylabs, Shadcn, and Zustand. It replicates the functionality of the Walmart website, featuring a homepage, search page, product page, and cart. The content is currently unavailable as my free trial for Oxylabs has expired",
@@ -148,7 +148,7 @@ const projects = [
   },
   {
     num: "05",
-    category: "Web2 Frontend",
+    category: "Frontend Development",
     title: "Google Clone",
     description:
       "Google Clone was aimed at building a search engine website that closely resembles Google. The project was implemented using HTML, CSS, and JavaScript, and all codes were hosted on GitHub for version control. The goal of the project was to provide an opportunity for me to improve my front-end web development skills by working on a real-world project. The project involved building a user interface similar to Google's search engine.",
