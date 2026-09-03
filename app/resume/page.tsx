@@ -21,7 +21,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "I am Emmanuel O. Akinbo, a Senior Frontend Engineer with over five years of experience building fast, accessible, and scalable web products. I specialize in React, Next.js, and TypeScript, translating complex product requirements into reliable interfaces and maintainable frontend systems. I also bring experience with Web3 integrations and smart contract development when products require blockchain capabilities.",
+    "I am Emmanuel O. Akinbo, a Senior Frontend Engineer with over five years of experience building scalable, performant, and accessible web applications. I specialize in React, Next.js, TypeScript, and Tailwind CSS—translating complex product requirements into reliable interfaces and maintainable frontend systems. I also bring experience with testing, CI/CD, and Web3 integrations when products require them.",
   info: [
     {
       fieldName: "Name",
@@ -58,27 +58,27 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "I have worked across product teams and organizations to build responsive interfaces, scalable frontend architecture, and dependable user experiences. Here’s a look at my professional journey so far:",
+    "I have led frontend initiatives and collaborated across product teams to deliver responsive interfaces, scalable frontend architecture, and dependable user experiences. Here’s a look at my professional journey so far:",
   items: [
     {
       company: "Dukia Precious Metals",
-      position: "Frontend Engineer",
+      position: "Senior Frontend Engineer",
       duration: "05/2024 - Present",
     },
     {
       company: "Greatsome Innovations Ltd.",
-      position: "Frontend Engineer",
-      duration: "05/2024 - 10/2024",
+      position: "Frontend Engineer (Contract)",
+      duration: "03/2024 - 05/2024",
     },
     {
       company: "Colab Apes",
-      position: "Founding and Lead Frontend Engineer",
+      position: "Founding & Lead Frontend Engineer",
       duration: "01/2023 - 03/2024",
     },
     {
       company: "Winners Chapel International",
       position: "Frontend Engineer",
-      duration: "08/2021 - 12/2022",
+      duration: "01/2022 - 12/2022",
     },
     {
       company: "Landmark University Student Council",
@@ -92,16 +92,16 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My educational history",
   description:
-    "Committed to continuous learning, I have pursued education in computer science and specialized blockchain programs to enhance my technical knowledge. My formal education, alongside specialized courses, equips me with the tools to excel in both Web2 and Web3 development.",
+    "My formal computer science education and specialized Web3 certifications support my work across modern frontend systems, product delivery, and blockchain-enabled applications.",
   items: [
     {
       institution: "Cyfrin Updraft",
-      degree: "Blockchain/Web3",
+      degree: "Blockchain/Web3 Certification",
       duration: "09/2024 - Present",
     },
     {
       institution: "Alchemy University",
-      degree: "Blockchain/Web3",
+      degree: "Web3 (Ethereum) Certification",
       duration: "04/2023 - Present",
     },
     {
@@ -115,7 +115,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "My core expertise is frontend engineering with React, Next.js, TypeScript, modern CSS, and scalable UI architecture. Solidity and Ethereum extend that foundation for products requiring Web3 capabilities.",
+    "My core expertise is frontend engineering with React, Next.js, TypeScript, Tailwind CSS, scalable UI architecture, state management, and data fetching. Jest, GitHub Actions, Docker, REST/GraphQL, Solidity, and Ethereum extend that foundation where products require them.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -169,7 +169,7 @@ const Resume = () => {
           defaultValue="about-me"
           className="flex flex-col gap-10 xl:flex-row xl:gap-[60px]"
         >
-          <TabsList className="mx-auto flex w-full max-w-[380px] flex-col gap-3 xl:mx-0 xl:gap-6">
+          <TabsList className="mx-auto grid w-full max-w-[380px] grid-cols-1 gap-3 md:max-w-none md:grid-cols-4 xl:mx-0 xl:flex xl:max-w-[380px] xl:flex-col xl:gap-6">
             <TabsTrigger value="about-me">About me</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
@@ -180,9 +180,9 @@ const Resume = () => {
           <div className="w-full xl:min-h-[70vh]">
             {/* Experience */}
             <TabsContent value="experience" className="w-full">
-              <div className="space-y-6 text-center xl:space-y-[30px] xl:text-left">
+              <div className="space-y-6 text-left xl:space-y-[30px]">
                 <h3 className="text-3xl font-bold sm:text-4xl">{experience.title}</h3>
-                <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
+                <p className="max-w-[600px] text-foreground/60">
                   {experience.description}
                 </p>
 
@@ -191,7 +191,7 @@ const Resume = () => {
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="flex min-h-[160px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-5 py-6 text-center shadow-sm sm:px-6 xl:h-[184px] xl:items-start xl:px-10 xl:text-left"
+                        className="flex min-h-[160px] flex-col items-start justify-center gap-1 rounded-xl border border-border/60 bg-surface px-5 py-6 text-left shadow-sm sm:px-6 xl:h-[184px] xl:px-10"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="min-h-[52px] max-w-[260px] text-lg sm:text-xl xl:min-h-[60px]">
@@ -212,9 +212,9 @@ const Resume = () => {
 
             {/* Education */}
             <TabsContent value="education" className="w-full">
-              <div className="space-y-[30px] text-center xl:text-left">
+              <div className="space-y-[30px] text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
+                <p className="max-w-[600px] text-foreground/60">
                   {education.description}
                 </p>
 
@@ -223,7 +223,7 @@ const Resume = () => {
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="flex min-h-[160px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-5 py-6 text-center shadow-sm sm:px-6 xl:h-[184px] xl:items-start xl:px-10 xl:text-left"
+                        className="flex min-h-[160px] flex-col items-start justify-center gap-1 rounded-xl border border-border/60 bg-surface px-5 py-6 text-left shadow-sm sm:px-6 xl:h-[184px] xl:px-10"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="min-h-[52px] max-w-[260px] text-lg sm:text-xl xl:min-h-[60px]">
@@ -245,9 +245,9 @@ const Resume = () => {
             {/* Skills */}
             <TabsContent value="skills" className="w-full h-full">
               <div className="space-y-6 xl:space-y-[30px]">
-                <div className="space-y-6 text-center xl:space-y-[30px] xl:text-left">
+                <div className="space-y-6 text-left xl:space-y-[30px]">
                   <h3 className="text-3xl font-bold sm:text-4xl">{skills.title}</h3>
-                  <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
+                  <p className="max-w-[600px] text-foreground/60">
                     {skills.description}
                   </p>
                 </div>
@@ -278,21 +278,21 @@ const Resume = () => {
             {/* About Me */}
             <TabsContent
               value="about-me"
-              className="w-full text-center xl:text-left"
+              className="w-full text-left"
             >
               <div className="space-y-6 xl:space-y-[30px]">
                 <h3 className="text-3xl font-bold sm:text-4xl">{about.title}</h3>
-                <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
+                <p className="max-w-[600px] text-foreground/60">
                   {about.description}
                 </p>
 
-                <ul className="mx-auto grid max-w-[620px] grid-cols-1 gap-y-4 sm:gap-y-6 xl:mx-0 xl:grid-cols-2">
+                <ul className="grid max-w-[620px] grid-cols-1 gap-y-4 sm:gap-y-6 xl:grid-cols-2">
                   {about.info.map((item, index) => (
                     <li
                       key={index}
                       className={`${
                         item.fieldName === "Email" && "xl:col-span-2"
-                      } flex items-center justify-center xl:justify-start gap-4`}
+                      } flex items-center justify-start gap-4`}
                     >
                       <span className="text-foreground/60">{item.fieldName}:</span>
                       <span className="break-all text-base sm:text-xl">{item.fieldValue}</span>

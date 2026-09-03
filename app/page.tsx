@@ -27,7 +27,7 @@ export default function Home() {
             {/* btn and socials */}
             <div className="flex flex-col items-center gap-8 sm:flex-row">
               <Link
-                href="/assets/resume/Emmanuel-Akinbo-RESUME.pdf"
+                href="/assets/resume/emmanuel-akinbo.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
