@@ -122,11 +122,13 @@ const earlierWork = [
 const ProjectLinks = ({
   live,
   github,
+  compact = false,
 }: {
   live: string;
   github: string;
+  compact?: boolean;
 }) => (
-  <div className="flex flex-col gap-3 sm:flex-row">
+  <div className={`flex flex-col gap-3 ${compact ? "lg:flex-row" : "sm:flex-row"}`}>
     <Link
       href={live}
       target="_blank"
@@ -301,7 +303,11 @@ export default function Work() {
                     <li key={technology}>{technology}</li>
                   ))}
                 </ul>
-                <ProjectLinks live={project.live} github={project.github} />
+                <ProjectLinks
+                  live={project.live}
+                  github={project.github}
+                  compact
+                />
               </div>
             </article>
           ))}
