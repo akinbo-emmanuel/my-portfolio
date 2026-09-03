@@ -12,7 +12,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex-1 flex flex-col justify-center gap-6 group border-b border-white/20 pb-6"
+              className="group flex flex-1 flex-col justify-center gap-6 border-b border-border/70 pb-6"
             >
               {/* Top */}
               <div className="w-full flex justify-between items-center">
@@ -21,17 +21,17 @@ const Services = () => {
                 </div>
                 <Link
                   href={service.href}
-                  className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex items-center justify-center hover:-rotate-45"
+                  className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-foreground transition-all duration-500 hover:-rotate-45 group-hover:bg-accent"
                 >
-                  <BsArrowDownRight className="text-primary text-3xl" />
+                  <BsArrowDownRight className="text-3xl text-background group-hover:text-accent-foreground" />
                 </Link>
               </div>
 
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+              <h2 className="text-[42px] font-bold leading-none text-foreground transition-all duration-500 group-hover:text-accent">
                 {service.title}
               </h2>
 
-              <p className="text-white/60">{service.description}</p>
+              <p className="text-foreground/60">{service.description}</p>
             </div>
           ))}
         </div>

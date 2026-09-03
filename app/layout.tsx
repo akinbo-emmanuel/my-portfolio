@@ -14,6 +14,18 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
+const themeScript = `
+  (function () {
+    try {
+      var savedTheme = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var isDark = savedTheme ? savedTheme === "dark" : prefersDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+    } catch (_) {}
+  })();
+`;
+
 export const metadata: Metadata = {
   title: "Emmanuel Akinbo | Senior Frontend Engineer",
   description:
@@ -69,9 +81,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-      <script defer src="https://cloud.umami.is/script.js" data-website-id="f863488f-bd03-4a39-889e-360760459730"></script>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="f863488f-bd03-4a39-889e-360760459730"></script>
       </head>
       <body className={jetbrainsMono.variable}>
         <Header />

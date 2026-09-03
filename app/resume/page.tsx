@@ -182,7 +182,7 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="space-y-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
                   {experience.description}
                 </p>
 
@@ -191,7 +191,7 @@ const Resume = () => {
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-10 py-6 shadow-sm lg:items-start"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -201,7 +201,7 @@ const Resume = () => {
                           {/* dot */}
                           <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
 
-                          <p className="text-white/60">{item.company}</p>
+                          <p className="text-foreground/60">{item.company}</p>
                         </div>
                       </li>
                     ))}
@@ -214,7 +214,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="space-y-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
                   {education.description}
                 </p>
 
@@ -223,7 +223,7 @@ const Resume = () => {
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl border border-border/60 bg-surface px-10 py-6 shadow-sm lg:items-start"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -233,7 +233,7 @@ const Resume = () => {
                           {/* dot */}
                           <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
 
-                          <p className="text-white/60">{item.institution}</p>
+                          <p className="text-foreground/60">{item.institution}</p>
                         </div>
                       </li>
                     ))}
@@ -247,7 +247,7 @@ const Resume = () => {
               <div className="space-y-[30px]">
                 <div className="space-y-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
@@ -257,7 +257,7 @@ const Resume = () => {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <TooltipTrigger className="group flex h-[150px] w-full items-center justify-center rounded-xl border border-border/60 bg-surface shadow-sm">
                               <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                 {skill.icon}
                               </div>
@@ -282,7 +282,7 @@ const Resume = () => {
             >
               <div className="space-y-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="mx-auto max-w-[600px] text-foreground/60 xl:mx-0">
                   {about.description}
                 </p>
 
@@ -294,7 +294,7 @@ const Resume = () => {
                         item.fieldName === "Email" && "xl:col-span-2"
                       } flex items-center justify-center xl:justify-start gap-4`}
                     >
-                      <span className="text-white/60">{item.fieldName}:</span>
+                      <span className="text-foreground/60">{item.fieldName}:</span>
                       <span className="text-xl">{item.fieldValue}</span>
                     </li>
                   ))}

@@ -23,10 +23,17 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: "#1c1c22", // existing primary for background
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        primary: "rgb(var(--background) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
+        curtain: "rgb(var(--curtain) / <alpha-value>)",
         accent: {
-          DEFAULT: "#4a90e2", // a soft blue that stands out but complements the dark background
-          hover: "#357ABD", // slightly darker blue for hover effect
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          hover: "rgb(var(--accent-hover) / <alpha-value>)",
+          foreground: "rgb(var(--accent-foreground) / <alpha-value>)",
         },
       },
       borderRadius: {

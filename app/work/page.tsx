@@ -131,7 +131,7 @@ const ProjectLinks = ({
       href={live}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-primary transition-colors hover:bg-accent-hover"
+      className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
     >
       View live site
       <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -142,7 +142,7 @@ const ProjectLinks = ({
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 font-medium text-white transition-colors hover:border-accent hover:text-accent"
+        className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
       >
         View source
         <Github className="h-4 w-4" aria-hidden="true" />
@@ -160,7 +160,7 @@ export default function Work() {
             Selected work
           </p>
           <h1 className="h2 mb-5">Products built around real user needs.</h1>
-          <p className="text-lg text-white/60">
+          <p className="text-lg text-foreground/60">
             A closer look at how I approach frontend architecture, product
             workflows, responsive interfaces, and dependable delivery.
           </p>
@@ -170,7 +170,7 @@ export default function Work() {
           {featuredProjects.map((project, index) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-2xl border border-white/10 bg-[#232329]"
+              className="overflow-hidden rounded-2xl border border-border/60 bg-surface shadow-sm"
             >
               <div className="grid xl:grid-cols-2">
                 <div
@@ -192,7 +192,7 @@ export default function Work() {
                     <p className="text-sm font-medium uppercase tracking-[0.16em] text-accent">
                       {project.category}
                     </p>
-                    <span className="text-4xl font-bold text-white/10">
+                    <span className="text-4xl font-bold text-foreground/10">
                       {project.num}
                     </span>
                   </div>
@@ -200,17 +200,17 @@ export default function Work() {
                   <h2 className="mb-5 text-3xl font-bold sm:text-4xl">
                     {project.title}
                   </h2>
-                  <p className="mb-7 text-white/60">{project.summary}</p>
+                  <p className="mb-7 text-foreground/60">{project.summary}</p>
 
                   <div className="mb-7 border-l-2 border-accent pl-5">
-                    <p className="mb-1 text-sm font-medium uppercase tracking-wider text-white/40">
+                    <p className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground/45">
                       My contribution
                     </p>
-                    <p className="text-white/80">{project.contribution}</p>
+                    <p className="text-foreground/80">{project.contribution}</p>
                   </div>
 
                   <h3 className="mb-3 font-semibold">What I delivered</h3>
-                  <ul className="mb-8 space-y-2 text-sm text-white/60">
+                  <ul className="mb-8 space-y-2 text-sm text-foreground/60">
                     {project.highlights.map((highlight) => (
                       <li key={highlight} className="flex gap-3">
                         <span className="mt-[0.7rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
@@ -223,7 +223,7 @@ export default function Work() {
                     {project.stack.map((technology) => (
                       <li
                         key={technology}
-                        className="rounded-full bg-white/5 px-3 py-1 text-sm text-white/70"
+                        className="rounded-full bg-muted px-3 py-1 text-sm text-foreground/70"
                       >
                         {technology}
                       </li>
@@ -238,13 +238,13 @@ export default function Work() {
         </div>
       </section>
 
-      <section className="container mx-auto mt-24 border-t border-white/10 pt-14">
+      <section className="container mx-auto mt-24 border-t border-border/60 pt-14">
         <div className="mb-9 max-w-2xl">
           <p className="mb-2 font-medium uppercase tracking-[0.2em] text-accent">
             Earlier work
           </p>
           <h2 className="text-3xl font-bold">Experiments and learning projects</h2>
-          <p className="mt-3 text-white/60">
+          <p className="mt-3 text-foreground/60">
             Selected projects from earlier stages of my frontend journey.
           </p>
         </div>
@@ -253,7 +253,7 @@ export default function Work() {
           {earlierWork.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-xl border border-white/10 bg-[#232329]"
+              className="overflow-hidden rounded-xl border border-border/60 bg-surface shadow-sm"
             >
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
@@ -267,7 +267,7 @@ export default function Work() {
 
               <div className="p-6">
                 <h3 className="mb-2 text-2xl font-semibold">{project.title}</h3>
-                <p className="mb-5 text-sm text-white/60">
+                <p className="mb-5 text-sm text-foreground/60">
                   {project.description}
                 </p>
                 <ul className="mb-6 flex flex-wrap gap-x-3 gap-y-1 text-sm text-accent">

@@ -34,7 +34,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
           />
 
           <motion.div
-            className="absolute inset-0 z-10 bg-[#232329] will-change-transform"
+            className="absolute inset-0 z-10 bg-curtain will-change-transform"
             initial={{ scaleY: 1 }}
             animate={{ scaleY: 0 }}
             transition={{

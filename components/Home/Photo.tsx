@@ -19,7 +19,7 @@ const Photo = () => {
         }}
       >
         {/* image */}
-        <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-difference absolute">
+        <div className="absolute h-[298px] w-[298px] xl:h-[498px] xl:w-[498px]">
           <Image
             src="/assets/photo.webp"
             priority
@@ -41,7 +41,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#4a90e2"
+            className="stroke-accent"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

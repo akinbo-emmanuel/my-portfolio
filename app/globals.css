@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 246 248 252;
+  --foreground: 22 28 38;
+  --surface: 255 255 255;
+  --muted: 237 241 247;
+  --border: 207 216 228;
+  --curtain: 28 28 34;
+  --accent: 37 99 235;
+  --accent-hover: 29 78 216;
+  --accent-foreground: 255 255 255;
+  color-scheme: light;
+}
+
+.dark {
+  --background: 28 28 34;
+  --foreground: 255 255 255;
+  --surface: 35 35 41;
+  --muted: 39 39 44;
+  --border: 63 63 70;
+  --curtain: 35 35 41;
+  --accent: 74 144 226;
+  --accent-hover: 53 122 189;
+  --accent-foreground: 28 28 34;
+  color-scheme: dark;
+}
+
+html.theme-changing *,
+html.theme-changing *::before,
+html.theme-changing *::after {
+  transition-duration: 250ms !important;
+  transition-property: background-color, border-color, color, fill, stroke !important;
+  transition-timing-function: ease !important;
+}
+
 html:has(.page-transition-curtain),
 body:has(.page-transition-curtain) {
   overflow: hidden;
@@ -9,7 +43,7 @@ body:has(.page-transition-curtain) {
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply bg-background font-primary leading-loose text-foreground transition-colors duration-300;
   }
 
   .h1 {
@@ -22,10 +56,10 @@ body:has(.page-transition-curtain) {
     @apply text-xl xl:text-2xl leading-[1.1] font-semibold;
   }
   .text-outline {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px rgb(var(--foreground));
   }
 
   .text-outline-hover {
-    -webkit-text-stroke: 1px #4a90e2;
+    -webkit-text-stroke: 1px rgb(var(--accent));
   }
 }
