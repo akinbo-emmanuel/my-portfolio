@@ -36,6 +36,9 @@ const info = [
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
+  const [resultStatus, setResultStatus] = React.useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
   const [isSending, setIsSending] = React.useState(false);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -47,6 +50,7 @@ const Contact = () => {
     // https://docs.web3forms.com/getting-started/faq
     formData.append("access_key", "020b47ac-247e-41a2-9e30-ed3cc3958b48");
     setIsSending(true);
+    setResultStatus("sending");
     setResult("Sending your message…");
 
     try {
@@ -62,9 +66,11 @@ const Contact = () => {
         throw new Error(data.message || "Unable to send your message.");
       }
 
+      setResultStatus("success");
       setResult("Message sent successfully. I’ll get back to you soon.");
       form.reset();
     } catch (error) {
+      setResultStatus("error");
       setResult(
         error instanceof Error
           ? error.message
@@ -197,7 +203,13 @@ const Contact = () => {
                 </Button>
 
                 <p
-                  className="text-sm text-foreground/60"
+                  className={`text-sm ${
+                    resultStatus === "success"
+                      ? "text-green-600 dark:text-green-400"
+                      : resultStatus === "error"
+                        ? "text-red-600 dark:text-red-400"
+                        : "text-foreground/60"
+                  }`}
                   role="status"
                   aria-live="polite"
                 >
