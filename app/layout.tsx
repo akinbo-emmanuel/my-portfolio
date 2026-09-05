@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 // Components
 import Header from "@/components/Header";
 import PageTransition from "@/components/Animation/PageTransition";
+import { siteConfig } from "@/config/site";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -27,9 +28,15 @@ const themeScript = `
 `;
 
 export const metadata: Metadata = {
-  title: "Emmanuel Akinbo | Senior Frontend Engineer",
-  description:
-    "Portfolio of Emmanuel Akinbo, a Senior Frontend Engineer specializing in React, Next.js, TypeScript, accessible interfaces, and scalable web products, with additional experience in Web3 integrations.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: "%s | Emmanuel Akinbo",
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Emmanuel Akinbo",
     "Senior Frontend Engineer",
@@ -49,18 +56,21 @@ export const metadata: Metadata = {
     "Blockchain Portfolio",
   ],
   authors: [
-    { name: "Emmanuel Akinbo", url: "https://emmanuelakinbo.vercel.app" },
+    { name: siteConfig.name, url: siteConfig.url },
   ],
+  creator: siteConfig.name,
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Emmanuel Akinbo | Senior Frontend Engineer",
+    title: siteConfig.title,
     description:
       "Senior frontend engineering work by Emmanuel Akinbo, focused on scalable React and Next.js products, accessible interfaces, and reliable user experiences.",
-    url: "https://emmanuelakinbo.vercel.app",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: "en_NG",
     type: "website",
     images: [
       {
-        url: "https://emmanuelakinbo.vercel.app/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Emmanuel Akinbo — Senior Frontend Engineer",
@@ -69,10 +79,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emmanuel Akinbo | Senior Frontend Engineer",
+    title: siteConfig.title,
     description:
       "Senior frontend engineering work focused on scalable React and Next.js products, accessible interfaces, and reliable user experiences.",
-    images: ["https://emmanuelakinbo.vercel.app/twitter-image.jpg"],
+    images: ["/twitter-image.jpg"],
   },
 };
 
