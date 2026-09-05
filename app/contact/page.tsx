@@ -43,6 +43,8 @@ const Contact = () => {
     const form = event.currentTarget;
     const formData = new FormData(form);
 
+    // Public submission key, not an account credential:
+    // https://docs.web3forms.com/getting-started/faq
     formData.append("access_key", "020b47ac-247e-41a2-9e30-ed3cc3958b48");
     setIsSending(true);
     setResult("Sending your message…");
@@ -83,6 +85,16 @@ const Contact = () => {
               onSubmit={onSubmit}
               className="space-y-5 rounded-xl border border-border/60 bg-surface p-5 shadow-sm sm:space-y-6 sm:p-8 xl:p-10"
             >
+              {/* Web3Forms honeypot: hidden from visitors and assistive technology.
+                  A checked botcheck field lets the provider reject bot submissions. */}
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
               <h3 className="text-3xl leading-tight text-accent sm:text-4xl">
                 Let&apos;s Build Something Exceptional
               </h3>
