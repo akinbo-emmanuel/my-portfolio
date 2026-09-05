@@ -101,7 +101,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${siteConfig.url}/emmanuel-akinbo-og-v2.jpg`,
+        secureUrl: `${siteConfig.url}/emmanuel-akinbo-og-v2.jpg`,
+        type: "image/jpeg",
         width: 1200,
         height: 630,
         alt: "Emmanuel Akinbo — Senior Frontend Engineer",
