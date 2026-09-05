@@ -27,6 +27,34 @@ const themeScript = `
   })();
 `;
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  image: `${siteConfig.url}${siteConfig.image}`,
+  jobTitle: "Senior Frontend Engineer",
+  description: siteConfig.description,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lagos",
+    addressCountry: "NG",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: "Dukia Precious Metals",
+  },
+  knowsAbout: [
+    "Frontend engineering",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Web accessibility",
+    "Web3 integrations",
+  ],
+  sameAs: siteConfig.socials,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -59,6 +87,9 @@ export const metadata: Metadata = {
     { name: siteConfig.name, url: siteConfig.url },
   ],
   creator: siteConfig.name,
+  verification: {
+    google: "DpfGxmWoryx-pLSrla9o8SFbDexz46eMiHioIB44_iw",
+  },
   manifest: "/site.webmanifest",
   openGraph: {
     title: siteConfig.title,
@@ -95,6 +126,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
         <script
           defer
           src="https://cloud.umami.is/script.js"
