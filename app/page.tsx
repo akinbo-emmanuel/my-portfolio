@@ -32,17 +32,30 @@ export default function Home() {
 
             {/* Calls to action and social links */}
             <div className="flex flex-col items-center gap-6 sm:items-start">
-              <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
-                <Button asChild size="lg" className="gap-2">
-                  <Link href="/work">
-                    <span>View selected work</span>
+              <div className="flex w-full flex-nowrap justify-center gap-3 sm:w-auto sm:justify-start">
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-12 gap-2 px-4 text-xs sm:h-14 sm:px-8 sm:text-sm"
+                >
+                  <Link href="/work" aria-label="View selected work">
+                    <span>View work</span>
                     <ArrowRight className="text-xl" />
                   </Link>
                 </Button>
 
-                <Button asChild variant="outline" size="lg" className="gap-2">
-                  <a href="/assets/resume/emmanuel-akinbo.pdf" download>
-                    <span>Download résumé</span>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="h-12 gap-2 px-4 text-xs sm:h-14 sm:px-8 sm:text-sm"
+                >
+                  <a
+                    href="/assets/resume/emmanuel-akinbo.pdf"
+                    download
+                    aria-label="Download résumé"
+                  >
+                    <span>Résumé</span>
                     <FileDown className="text-xl" />
                   </a>
                 </Button>
