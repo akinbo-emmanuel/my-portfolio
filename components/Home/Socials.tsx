@@ -2,10 +2,10 @@ import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaGithub />, link: "https://github.com/akinbo-emmanuel" },
-  { icon: <FaLinkedinIn />, link: "https://linkedin.com/in/emmanuel-akinbo" },
-  { icon: <FaInstagram />, link: "https://instagram.com/_emmanuelakinbo" },
-  { icon: <FaTwitter />, link: "https://twitter.com/_emmanuelakinbo" },
+  { icon: <FaGithub />, label: "GitHub", link: "https://github.com/akinbo-emmanuel" },
+  { icon: <FaLinkedinIn />, label: "LinkedIn", link: "https://linkedin.com/in/emmanuel-akinbo" },
+  { icon: <FaInstagram />, label: "Instagram", link: "https://instagram.com/_emmanuelakinbo" },
+  { icon: <FaTwitter />, label: "X (Twitter)", link: "https://twitter.com/_emmanuelakinbo" },
 ];
 
 interface SocialsProps {
@@ -21,9 +21,11 @@ const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
           key={index}
           href={item.link}
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Visit Emmanuel Akinbo on ${item.label}`}
           className={iconStyles}
         >
-          {item.icon}
+          <span aria-hidden="true">{item.icon}</span>
         </Link>
       ))}
     </div>

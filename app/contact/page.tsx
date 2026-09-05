@@ -36,28 +36,40 @@ const info = [
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
+  const [isSending, setIsSending] = React.useState(false);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target as HTMLFormElement);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     formData.append("access_key", "020b47ac-247e-41a2-9e30-ed3cc3958b48");
+    setIsSending(true);
+    setResult("Sending your message…");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data: { success?: boolean; message?: string } =
+        await response.json();
 
-    if (data.success) {
-      setTimeout(() => setResult("Form Submitted Successfully"), 10000);
-      const form = event.target as HTMLFormElement;
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Unable to send your message.");
+      }
+
+      setResult("Message sent successfully. I’ll get back to you soon.");
       form.reset();
-    } else {
-      console.log("Error", data);
-      setTimeout(() => setResult(data.message), 10000);
+    } catch (error) {
+      setResult(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -83,29 +95,57 @@ const Contact = () => {
 
               {/* Input */}
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
+                <label htmlFor="first-name" className="sr-only">
+                  First name
+                </label>
                 <Input
+                  id="first-name"
                   required
                   type="text"
                   name="First Name"
                   placeholder="First Name"
+                  autoComplete="given-name"
                 />
+                <label htmlFor="last-name" className="sr-only">
+                  Last name
+                </label>
                 <Input
+                  id="last-name"
                   required
                   type="text"
                   name="Last Name"
                   placeholder="Last Name"
+                  autoComplete="family-name"
                 />
-                <Input required type="email" name="Email" placeholder="Email" />
+                <label htmlFor="email" className="sr-only">
+                  Email address
+                </label>
                 <Input
+                  id="email"
+                  required
+                  type="email"
+                  name="Email"
+                  placeholder="Email"
+                  autoComplete="email"
+                />
+                <label htmlFor="phone" className="sr-only">
+                  Phone number
+                </label>
+                <Input
+                  id="phone"
                   type="tel"
                   name="Phone Number"
                   placeholder="Phone Number (optional)"
+                  autoComplete="tel"
                 />
               </div>
 
               {/* Select */}
+              <label htmlFor="service" className="sr-only">
+                Service
+              </label>
               <Select name="Service">
-                <SelectTrigger className="w-full">
+                <SelectTrigger id="service" className="w-full">
                   <SelectValue placeholder="Select a service (optional)"></SelectValue>
                 </SelectTrigger>
 
@@ -122,7 +162,11 @@ const Contact = () => {
               </Select>
 
               {/* Text area */}
+              <label htmlFor="message" className="sr-only">
+                Message
+              </label>
               <Textarea
+                id="message"
                 required
                 name="Message"
                 className="h-40 sm:h-[200px]"
@@ -132,15 +176,21 @@ const Contact = () => {
               {/* btn */}
               <div className="flex flex-wrap items-center gap-3">
                 <Button
-                  disabled={result === "Sending...."}
+                  disabled={isSending}
                   type="submit"
                   size="sm"
                   className="min-h-11 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  Send message
+                  {isSending ? "Sending…" : "Send message"}
                 </Button>
 
-                <p className="text-foreground/60">{result && result}</p>
+                <p
+                  className="text-sm text-foreground/60"
+                  role="status"
+                  aria-live="polite"
+                >
+                  {result}
+                </p>
               </div>
             </form>
           </div>

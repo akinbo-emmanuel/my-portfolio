@@ -5,19 +5,18 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
 import { links } from "./Nav";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const MobileNav = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className="flex h-11 w-11 items-center justify-center">
+      <SheetTrigger
+        className="flex h-11 w-11 items-center justify-center"
+        aria-label="Open navigation menu"
+      >
         <CiMenuFries className="text-3xl text-accent" />
       </SheetTrigger>
 
