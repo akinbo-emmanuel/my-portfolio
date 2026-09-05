@@ -104,7 +104,7 @@ const Contact = () => {
               <h3 className="text-3xl leading-tight text-accent sm:text-4xl">
                 Let&apos;s Build Something Exceptional
               </h3>
-              <p className="text-foreground/60">
+              <p className="text-justify text-foreground/60">
                 As a Senior Frontend Engineer, I turn complex requirements into
                 fast, accessible, and maintainable web products. Whether you
                 need a polished product interface, a scalable frontend system,

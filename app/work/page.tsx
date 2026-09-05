@@ -196,7 +196,7 @@ export default function Work() {
             Selected work
           </p>
           <h1 className="h2 mb-5">Products built around real user needs.</h1>
-          <p className="text-base text-foreground/60 sm:text-lg">
+          <p className="text-justify text-base text-foreground/60 sm:text-lg">
             A closer look at how I approach frontend architecture, product
             workflows, responsive interfaces, and dependable delivery.
           </p>
@@ -236,13 +236,17 @@ export default function Work() {
                   <h2 className="mb-5 text-2xl font-bold sm:text-4xl">
                     {project.title}
                   </h2>
-                  <p className="mb-7 text-foreground/60">{project.summary}</p>
+                  <p className="mb-7 text-justify text-foreground/60">
+                    {project.summary}
+                  </p>
 
                   <div className="mb-7 border-l-2 border-accent pl-5">
                     <p className="mb-1 text-sm font-medium uppercase tracking-wider text-foreground/45">
                       My contribution
                     </p>
-                    <p className="text-foreground/80">{project.contribution}</p>
+                    <p className="text-justify text-foreground/80">
+                      {project.contribution}
+                    </p>
                   </div>
 
                   <Highlights highlights={project.highlights} />

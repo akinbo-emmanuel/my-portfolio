@@ -23,7 +23,7 @@ export default function Home() {
                 I build high-performance React and Next.js products for
                 complex, workflow-heavy systems.
               </span>
-              <span>
+              <span className="block text-justify">
                 I specialize in scalable frontend architecture, real-time
                 interfaces, performance, and turning complicated business
                 requirements into reliable user experiences.
@@ -36,7 +36,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="h-12 gap-2 px-4 text-xs sm:h-14 sm:px-8 sm:text-sm"
+                  className="h-12 min-w-0 flex-1 gap-2 px-3 text-xs sm:h-14 sm:flex-none sm:px-8 sm:text-sm"
                 >
                   <Link href="/work" aria-label="View selected work">
                     <span>View work</span>
@@ -48,7 +48,7 @@ export default function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="h-12 gap-2 px-4 text-xs sm:h-14 sm:px-8 sm:text-sm"
+                  className="h-12 min-w-0 flex-1 gap-2 px-3 text-xs sm:h-14 sm:flex-none sm:px-8 sm:text-sm"
                 >
                   <a
                     href="/assets/resume/emmanuel-akinbo.pdf"

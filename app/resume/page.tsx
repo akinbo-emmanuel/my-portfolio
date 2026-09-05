@@ -182,7 +182,7 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="space-y-6 text-left xl:space-y-[30px]">
                 <h3 className="text-3xl font-bold sm:text-4xl">{experience.title}</h3>
-                <p className="max-w-[600px] text-foreground/60">
+                <p className="w-full max-w-none text-justify text-foreground/60 xl:max-w-[600px]">
                   {experience.description}
                 </p>
 
@@ -214,7 +214,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="space-y-[30px] text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-foreground/60">
+                <p className="w-full max-w-none text-justify text-foreground/60 xl:max-w-[600px]">
                   {education.description}
                 </p>
 
@@ -247,7 +247,7 @@ const Resume = () => {
               <div className="space-y-6 xl:space-y-[30px]">
                 <div className="space-y-6 text-left xl:space-y-[30px]">
                   <h3 className="text-3xl font-bold sm:text-4xl">{skills.title}</h3>
-                  <p className="max-w-[600px] text-foreground/60">
+                  <p className="w-full max-w-none text-justify text-foreground/60 xl:max-w-[600px]">
                     {skills.description}
                   </p>
                 </div>
@@ -282,7 +282,7 @@ const Resume = () => {
             >
               <div className="space-y-6 xl:space-y-[30px]">
                 <h3 className="text-3xl font-bold sm:text-4xl">{about.title}</h3>
-                <p className="max-w-[600px] text-foreground/60">
+                <p className="w-full max-w-none text-justify text-foreground/60 xl:max-w-[600px]">
                   {about.description}
                 </p>
 

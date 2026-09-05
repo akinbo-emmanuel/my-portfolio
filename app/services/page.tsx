@@ -31,7 +31,9 @@ const Services = () => {
                 {service.title}
               </h2>
 
-              <p className="text-foreground/60">{service.description}</p>
+              <p className="text-foreground/60 text-justify">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
