@@ -3,7 +3,7 @@ import Role from "@/components/Home/Role";
 import Socials from "@/components/Home/Socials";
 import Stats from "@/components/Home/Stats";
 import { Button } from "@/components/ui/button";
-import { FileDown } from "lucide-react";
+import { ArrowRight, FileDown } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -30,30 +30,28 @@ export default function Home() {
               </span>
             </p>
 
-            {/* btn and socials */}
-            <div className="flex flex-col items-center gap-8 sm:flex-row">
-              <Link
-                href="/assets/resume/emmanuel-akinbo.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant={"outline"}
-                  size={"lg"}
-                  className="uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FileDown className="text-xl" />
+            {/* Calls to action and social links */}
+            <div className="flex flex-col items-center gap-6 sm:items-start">
+              <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
+                <Button asChild size="lg" className="gap-2">
+                  <Link href="/work">
+                    <span>View selected work</span>
+                    <ArrowRight className="text-xl" />
+                  </Link>
                 </Button>
-              </Link>
 
-              <div>
-                <Socials
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-accent-foreground hover:transition-all duration-500"
-                />
+                <Button asChild variant="outline" size="lg" className="gap-2">
+                  <a href="/assets/resume/emmanuel-akinbo.pdf" download>
+                    <span>Download résumé</span>
+                    <FileDown className="text-xl" />
+                  </a>
+                </Button>
               </div>
+
+              <Socials
+                containerStyles="flex gap-6"
+                iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-accent-foreground hover:transition-all duration-500"
+              />
             </div>
           </div>
 
