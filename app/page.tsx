@@ -19,9 +19,15 @@ export default function Home() {
               <span className="text-accent">Emmanuel Akinbo</span>
             </h1>
             <p className="mb-9 max-w-[500px] text-foreground/75">
-              I build fast, accessible React and Next.js products—turning
-              complex ideas and workflows into clear, reliable experiences
-              people enjoy using.
+              <span className="mb-5 block font-semibold text-foreground">
+                I build high-performance React and Next.js products for
+                complex, workflow-heavy systems.
+              </span>
+              <span>
+                I specialize in scalable frontend architecture, real-time
+                interfaces, performance, and turning complicated business
+                requirements into reliable user experiences.
+              </span>
             </p>
 
             {/* btn and socials */}
