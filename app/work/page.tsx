@@ -29,7 +29,7 @@ const featuredProjects = [
     image: "/assets/work/teen-africa-academy.svg",
     imageAlt:
       "Teen Africa Academy dashboard showing missions, career insights, and admin tools",
-    live: "https://taa25.vercel.app",
+    live: "",
     github: "",
   },
   {
@@ -129,15 +129,17 @@ const ProjectLinks = ({
   compact?: boolean;
 }) => (
   <div className={`flex flex-col gap-3 ${compact ? "lg:flex-row" : "sm:flex-row"}`}>
-    <Link
-      href={live}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover sm:w-auto"
-    >
-      View live site
-      <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-    </Link>
+    {live && (
+      <Link
+        href={live}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover sm:w-auto"
+      >
+        View live site
+        <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+      </Link>
+    )}
 
     {github && (
       <Link
