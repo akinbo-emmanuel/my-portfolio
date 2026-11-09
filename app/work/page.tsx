@@ -11,7 +11,6 @@ const featuredProjects = [
     category: "Backend engineering · API foundation",
     image: "",
     imageAlt: "",
-    live: "",
     caseStudy: "/work/roylume-api",
   },
   {
@@ -134,10 +133,12 @@ const ProjectLinks = ({
   live,
   github,
   compact = false,
+  liveLabel = "View live site",
 }: {
   live: string;
   github: string;
   compact?: boolean;
+  liveLabel?: string;
 }) => (
   <div className={`flex flex-col gap-3 ${compact ? "lg:flex-row" : "sm:flex-row"}`}>
     {live && (
@@ -147,7 +148,7 @@ const ProjectLinks = ({
         rel="noopener noreferrer"
         className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover sm:w-auto"
       >
-        View live site
+        {liveLabel}
         <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
       </Link>
     )}
@@ -283,7 +284,7 @@ export default function Work() {
                       </Link>
                     </>
                   )}
-                  <ProjectLinks live={project.live} github={project.github} />
+                  <ProjectLinks live={project.live} github={project.github} liveLabel={"liveLabel" in project ? project.liveLabel : undefined} />
                 </div>
               </div>
             </article>

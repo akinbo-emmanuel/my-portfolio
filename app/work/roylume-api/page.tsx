@@ -75,6 +75,8 @@ export default function RoylumeCaseStudy() {
           <p className="mb-6 text-xl leading-relaxed">Building the system behind the interface.</p>
           <p className="mb-8 text-foreground/70">{roylume.summary}</p>
           <a href={roylume.github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-3 rounded-full bg-accent px-6 py-3 font-medium text-accent-foreground hover:bg-accent-hover"><Github className="h-4 w-4" aria-hidden="true" />Explore the repository<ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
+          <a href={roylume.live} target="_blank" rel="noopener noreferrer" className="mt-4 flex min-h-11 w-fit items-center gap-2 text-accent underline underline-offset-4">{roylume.liveLabel}<ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
+          <p className="mt-2 text-sm text-foreground/70">The product site currently contains the landing page.</p>
         </div>
         <div className="overflow-hidden rounded-2xl border border-border"><RoylumeArchitecture /></div>
       </header>

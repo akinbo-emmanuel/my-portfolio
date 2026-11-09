@@ -11,6 +11,8 @@ export const roylume = {
     "Added automated API tests, OpenAPI validation, and CI checks for Node and both Worker bundles.",
   ],
   stack: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Neon", "Cloudflare Workers", "Cloudflare Hyperdrive", "Vitest", "GitHub Actions"],
+  live: "https://roylume.vercel.app",
+  liveLabel: "View Roylume landing page",
   github: "https://github.com/akinbo-emmanuel/roylume-api",
   pullRequest: "https://github.com/akinbo-emmanuel/roylume-api/pull/22",
 };
