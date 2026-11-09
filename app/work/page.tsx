@@ -1,10 +1,21 @@
 import Image from "next/image";
+import RoylumeArchitecture from "@/components/Work/RoylumeArchitecture";
+import { roylume } from "@/data/roylume";
 import Link from "next/link";
 import { ArrowUpRight, ChevronDown, Github } from "lucide-react";
 
 const featuredProjects = [
   {
+    ...roylume,
     num: "01",
+    category: "Backend engineering · API foundation",
+    image: "",
+    imageAlt: "",
+    live: "",
+    caseStudy: "/work/roylume-api",
+  },
+  {
+    num: "02",
     category: "EdTech product platform",
     title: "Teen Africa Academy",
     summary:
@@ -33,7 +44,7 @@ const featuredProjects = [
     github: "",
   },
   {
-    num: "02",
+    num: "03",
     category: "Client website · Real estate",
     title: "Leke Sanni & Associates",
     summary:
@@ -59,7 +70,7 @@ const featuredProjects = [
     github: "",
   },
   {
-    num: "03",
+    num: "04",
     category: "Ecommerce interface",
     title: "FASCO Shop",
     summary:
@@ -199,7 +210,7 @@ export default function Work() {
           </p>
           <h1 className="h2 mb-5">Products built around real user needs.</h1>
           <p className="text-justify text-base text-foreground/60 sm:text-lg">
-            A closer look at how I approach frontend architecture, product
+            A closer look at how I approach frontend and backend architecture, product
             workflows, responsive interfaces, and dependable delivery.
           </p>
         </div>
@@ -216,13 +227,13 @@ export default function Work() {
                     index % 2 === 1 ? "xl:order-2" : ""
                   }`}
                 >
-                  <Image
+                  {project.image ? <Image
                     src={project.image}
                     fill
                     sizes="(min-width: 1280px) 50vw, 100vw"
                     className="object-cover"
                     alt={project.imageAlt}
-                  />
+                  /> : <RoylumeArchitecture />}
                 </div>
 
                 <div className="flex flex-col justify-center p-5 sm:p-10 xl:p-14">
@@ -264,6 +275,14 @@ export default function Work() {
                     ))}
                   </ul>
 
+                  {"caseStudy" in project && (
+                    <>
+                      <p className="mb-5 text-sm text-foreground/70">Production Worker not deployed. Logging and observability pending review in PR #22.</p>
+                      <Link href={project.caseStudy} className="mb-4 inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline underline-offset-4">
+                        Read the engineering case study <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                      </Link>
+                    </>
+                  )}
                   <ProjectLinks live={project.live} github={project.github} />
                 </div>
               </div>

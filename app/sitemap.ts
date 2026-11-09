@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 const pages = [
   { path: "", priority: 1 },
   { path: "/work", priority: 0.9 },
+  { path: "/work/roylume-api", priority: 0.8 },
   { path: "/services", priority: 0.8 },
   { path: "/resume", priority: 0.8 },
   { path: "/contact", priority: 0.7 },

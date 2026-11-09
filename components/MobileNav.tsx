@@ -39,7 +39,7 @@ const MobileNav = () => {
               key={index}
               onClick={() => setOpen(false)}
               className={`${
-                pathname === link.path && "text-accent border-b-2 border-accent"
+                (pathname === link.path || (link.path !== "/" && pathname.startsWith(`${link.path}/`))) && "text-accent border-b-2 border-accent"
               } flex min-h-11 items-center text-xl capitalize transition-colors hover:text-accent`}
             >
               {link.name}
