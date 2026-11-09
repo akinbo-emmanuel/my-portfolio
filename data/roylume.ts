@@ -1,7 +1,7 @@
 export const roylume = {
   title: "Roylume API",
   summary:
-    "A PostgreSQL-backed API foundation for a multi-sport platform, built around explicit database permissions, predictable failure handling, and a shared application across Node.js and Cloudflare Workers.",
+    "A privately developed PostgreSQL-backed API foundation for a multi-sport platform, built around explicit database permissions, predictable failure handling, and a shared application across Node.js and Cloudflare Workers.",
   contribution:
     "Extended my frontend engineering practice into backend ownership: designing the waitlist contract, separating runtime and migration responsibilities, and validating delivery across two runtimes.",
   highlights: [
@@ -11,8 +11,8 @@ export const roylume = {
     "Added automated API tests, OpenAPI validation, and CI checks for Node and both Worker bundles.",
   ],
   stack: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Neon", "Cloudflare Workers", "Cloudflare Hyperdrive", "Vitest", "GitHub Actions"],
-  live: "https://roylume.vercel.app",
-  liveLabel: "View Roylume landing page",
-  github: "https://github.com/akinbo-emmanuel/roylume-api",
-  pullRequest: "https://github.com/akinbo-emmanuel/roylume-api/pull/22",
+  live: "",
+  github: "",
+  repositoryLabel: "Private Repository",
+  sourceNote: "Source code available upon request.",
 };

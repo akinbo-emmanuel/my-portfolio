@@ -133,12 +133,10 @@ const ProjectLinks = ({
   live,
   github,
   compact = false,
-  liveLabel = "View live site",
 }: {
   live: string;
   github: string;
   compact?: boolean;
-  liveLabel?: string;
 }) => (
   <div className={`flex flex-col gap-3 ${compact ? "lg:flex-row" : "sm:flex-row"}`}>
     {live && (
@@ -148,7 +146,7 @@ const ProjectLinks = ({
         rel="noopener noreferrer"
         className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-accent-foreground transition-colors hover:bg-accent-hover sm:w-auto"
       >
-        {liveLabel}
+        View live site
         <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
       </Link>
     )}
@@ -278,13 +276,15 @@ export default function Work() {
 
                   {"caseStudy" in project && (
                     <>
+                      <p className="mb-3 w-fit rounded-full border border-border px-3 py-1 text-xs text-foreground/70">{roylume.repositoryLabel}</p>
+                      <p className="mb-4 text-sm text-foreground/70">{roylume.sourceNote}</p>
                       <p className="mb-5 text-sm text-foreground/70">Production Worker not deployed. Logging and observability pending review in PR #22.</p>
                       <Link href={project.caseStudy} className="mb-4 inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline underline-offset-4">
                         Read the engineering case study <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                       </Link>
                     </>
                   )}
-                  <ProjectLinks live={project.live} github={project.github} liveLabel={"liveLabel" in project ? project.liveLabel : undefined} />
+                  <ProjectLinks live={project.live} github={project.github} />
                 </div>
               </div>
             </article>

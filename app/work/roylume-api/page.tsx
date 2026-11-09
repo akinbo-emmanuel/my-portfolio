@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Github } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import RoylumeArchitecture from "@/components/Work/RoylumeArchitecture";
 import { roylume } from "@/data/roylume";
 
-const description = "Inside Roylume API: shared Express architecture, PostgreSQL permission boundaries, dual-runtime delivery, and automated validation with TypeScript and Vitest.";
+const description = "Inside Roylume API, a privately developed backend project: shared Express architecture, PostgreSQL permission boundaries, dual-runtime delivery, and automated validation with TypeScript and Vitest.";
 export const metadata: Metadata = {
   title: "Roylume API — Backend Engineering Case Study",
   description,
@@ -74,16 +74,15 @@ export default function RoylumeCaseStudy() {
           <h1 className="h1 mb-6">Roylume API</h1>
           <p className="mb-6 text-xl leading-relaxed">Building the system behind the interface.</p>
           <p className="mb-8 text-foreground/70">{roylume.summary}</p>
-          <a href={roylume.github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-3 rounded-full bg-accent px-6 py-3 font-medium text-accent-foreground hover:bg-accent-hover"><Github className="h-4 w-4" aria-hidden="true" />Explore the repository<ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
-          <a href={roylume.live} target="_blank" rel="noopener noreferrer" className="mt-4 flex min-h-11 w-fit items-center gap-2 text-accent underline underline-offset-4">{roylume.liveLabel}<ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
-          <p className="mt-2 text-sm text-foreground/70">The product site currently contains the landing page.</p>
+          <p className="mb-3 inline-flex rounded-full border border-border px-3 py-1 text-xs text-foreground/70">{roylume.repositoryLabel}</p>
+          <p className="text-sm text-foreground/70">{roylume.sourceNote}</p>
         </div>
         <div className="overflow-hidden rounded-2xl border border-border"><RoylumeArchitecture /></div>
       </header>
       <aside aria-label="Project status" className="my-10 rounded-xl border border-accent/40 bg-muted/50 p-5 sm:p-7">
         <h2 className="mb-2 font-semibold">Implementation status</h2>
         <p className="text-sm text-foreground/80">Core API, migrations, runtime adapters, and CI validation are implemented. The production Worker has not been deployed.</p>
-        <p className="mt-3 text-sm text-foreground/80">Pending review: structured logging, request IDs, and Cloudflare observability in <a href={roylume.pullRequest} className="text-accent underline underline-offset-4" target="_blank" rel="noopener noreferrer">PR #22</a>. Planned: authentication and sports data.</p>
+        <p className="mt-3 text-sm text-foreground/80">Pending review: structured logging, request IDs, and Cloudflare observability in PR #22. Planned: authentication and sports data.</p>
       </aside>
       <ul aria-label="Technology stack" className="mb-10 flex flex-wrap gap-2">{roylume.stack.map((item) => <li key={item} className="rounded-full bg-muted px-3 py-1 text-sm text-foreground/80">{item}</li>)}</ul>
       <div className="grid gap-10 xl:grid-cols-[230px_minmax(0,1fr)] xl:gap-16">
@@ -97,7 +96,7 @@ export default function RoylumeCaseStudy() {
             <h2 id={`${section.id}-title`} className="mb-6 text-2xl font-semibold sm:text-3xl">{section.title}</h2>
             {section.paragraphs.map((paragraph) => <p key={paragraph} className="mb-5 text-foreground/75">{paragraph}</p>)}
           </section>)}
-          <footer className="border-t border-border pt-6 text-sm text-foreground/70">Source: <a href={roylume.github} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">repository documentation and CI configuration</a>, with pending work tracked in <a href={roylume.pullRequest} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">PR #22</a>. Status reviewed November 9, 2026.</footer>
+          <footer className="border-t border-border pt-6 text-sm text-foreground/70">This privately developed backend engineering project is documented here independently of public source access. {roylume.sourceNote} Implementation status reflects private repository documentation and CI configuration, with pending work tracked in PR #22. Status reviewed November 9, 2026.</footer>
         </div>
       </div>
     </article>
